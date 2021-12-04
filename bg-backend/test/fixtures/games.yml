@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  year_published: 
+  min_players: 
+  max_players: 
+  min_playtime: 
+  max_playtime: 
+  description_preview: MyString
+
+two:
+  name: MyString
+  year_published: 
+  min_players: 
+  max_players: 
+  min_playtime: 
+  max_playtime: 
+  description_preview: MyString

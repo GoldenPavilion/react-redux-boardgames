@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :games
   namespace :api do
     resources :users
   end
