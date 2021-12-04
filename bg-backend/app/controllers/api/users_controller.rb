@@ -1,9 +1,9 @@
-class UsersController < ApplicationController
+class Api::UsersController < ApplicationController
   before_action :set_user, only: [:show]
 
-  # GET /users
-  # def index
-    #@users = User.all
+  #GET /users
+  #def index
+   # @users = User.all
 
     #render json: @users
   #end

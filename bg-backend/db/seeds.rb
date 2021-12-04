@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(username: "Leonardo", password: "lullaby", email: "leonardo@tmnt.com", location: "New York, NY", game_host: true);
+User.create(username: "Donatello", password: "lullaby", email: "donatello@tmnt.com", location: "New York, NY", game_host: false);
