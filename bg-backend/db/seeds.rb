@@ -19,4 +19,4 @@ Game.create(
     description_preview: "TRAINS ARE FUN!"
 )
 
-Comment.create(content: "What a great game!", user_id: 0, game_id: 0)
+Comment.create(content: "What a great game!", user_id: 1, game_id: 1)
