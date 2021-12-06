@@ -12,7 +12,7 @@ class Api::GamesController < ApplicationController
     private
 
     def game_params
-        params.require(:user).permit(:name, :year_published, :min_players, :max_players, :min_playtime, :max_playtime, :description_preview)
+        params.require(:game).permit(:name, :year_published, :min_players, :max_players, :min_playtime, :max_playtime, :description_preview)
     end
 
 end
