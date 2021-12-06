@@ -19,4 +19,17 @@ Game.create(
     description_preview: "TRAINS ARE FUN!"
 )
 
+Game.create(
+    name: "Cosmic Encounter", 
+    year_published: 2003,
+    min_players: 3, 
+    max_players: 5,
+    min_playtime: 45,
+    max_playtime: 90,
+    description_preview: "ALIENS! ALIENS! ALIENS!"
+)
+
 Comment.create(content: "What a great game!", user_id: 1, game_id: 1)
+
+UserGame.create(user_id: 1, game_id: 1)
+UserGame.create(user_id: 2, game_id: 1)
