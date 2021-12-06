@@ -8,3 +8,13 @@
 
 User.create(username: "Leonardo", password: "lullaby", email: "leonardo@tmnt.com", location: "New York, NY", game_host: true);
 User.create(username: "Donatello", password: "lullaby", email: "donatello@tmnt.com", location: "New York, NY", game_host: false);
+
+Game.create(
+    name: "Ticket to Ride", 
+    year_published: 2001,
+    min_players: 2, 
+    max_players: 5,
+    min_playtime: 45,
+    max_playtime: 90,
+    description_preview: "TRAINS ARE FUN!"
+)
