@@ -18,3 +18,5 @@ Game.create(
     max_playtime: 90,
     description_preview: "TRAINS ARE FUN!"
 )
+
+Comment.create(content: "What a great game!", user_id: 0, game_id: 0)
