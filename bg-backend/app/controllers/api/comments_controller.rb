@@ -1,13 +1,11 @@
 class Api::CommentsController < ApplicationController
     def index
         @comments = Comment.all
-        # render json: @comments
         render json: CommentSerializer.new(@comments)
     end
 
     def show
         @comment = Comment.find(params[:id])
-        # render json: @comment
         render json: CommentSerializer.new(@comment)
     end
 
@@ -15,7 +13,7 @@ class Api::CommentsController < ApplicationController
         @comment = Comment.new(comment_params)
 
         if @comment.save
-            render json: @comment, status: :created, location: @comment
+            render json: CommentSerializer.new(@comment), status: :created, location: @comment
         else
             render json: @comment.errors, status: :unprocessable_entity
         end

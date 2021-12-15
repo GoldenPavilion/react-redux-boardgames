@@ -1,13 +1,11 @@
 class Api::GamesController < ApplicationController
     def index
         @games = Game.all
-        #render json: @games
         render json: GameSerializer.new(@games)
     end
 
     def show
         @game = Game.find(params[:id])
-        #render json: @game
         render json: GameSerializer.new(@game)
     end
 
@@ -15,7 +13,7 @@ class Api::GamesController < ApplicationController
         @game = Game.new(game_params)
 
         if @game.save
-            render json: @game, status: :created, location: @game
+            render json: GameSerializer.new(@game), status: :created, location: @game
         else
             render json: @game.errors, status: :unprocessable_entity 
         end
