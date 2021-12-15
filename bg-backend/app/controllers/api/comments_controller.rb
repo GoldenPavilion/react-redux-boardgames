@@ -1,12 +1,14 @@
 class Api::CommentsController < ApplicationController
     def index
         @comments = Comment.all
-        render json: @comments
+        # render json: @comments
+        render json: CommentSerializer.new(@comments)
     end
 
     def show
         @comment = Comment.find(params[:id])
-        render json: @comment
+        # render json: @comment
+        render json: CommentSerializer.new(@comment)
     end
 
     def create
