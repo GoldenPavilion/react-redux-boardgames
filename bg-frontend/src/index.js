@@ -7,16 +7,20 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
+const games = () => []
+const reducer = combineReducers({
+  games
+})
+
 const store = createStore( 
-  //reducer, 
-  //applyMiddleware(thunk),
-  //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  reducer, 
+  applyMiddleware(thunk)
 )
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
-    </Provider>,
+  </Provider>,
   document.getElementById('root')
 );
 
