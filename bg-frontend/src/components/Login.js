@@ -2,7 +2,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateLoginForm } from '../actions/loginForm'
 
-const Login = ({ username, password }) => {
+const Login = ({ username, password, updateLoginForm }) => {
+    
+    const handleOnChange = event => {
+        const { name, value } = event.target
+        const updatedData = {
+            name,
+            value
+        }
+        updateLoginForm(updatedData)
+    }
+    
+    
     return(
         <div className="login">
             <form className="login-form">
@@ -12,7 +23,7 @@ const Login = ({ username, password }) => {
                     type="text"
                     name="username"
                     value={username}
-                    onChange={this.handleOnChange} 
+                    onChange={handleOnChange} 
                 />
                 <label>Password:</label>
                 <input 
@@ -20,7 +31,7 @@ const Login = ({ username, password }) => {
                     type="password"
                     name="password"
                     value={password}
-                    onChange={this.handleOnChange}
+                    onChange={handleOnChange}
                 />
                 <button type="submit" value="Login">Login</button>
             </form>
