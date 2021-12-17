@@ -4,7 +4,7 @@ import { updateLoginForm } from '../actions/loginForm'
 import { login } from '../actions/currentUser';
 
 
-const Login = ({ username, password, updateLoginForm }) => {
+const Login = ({ username, password, updateLoginForm, login }) => {
 
     const handleOnChange = event => {
         const { name, value } = event.target
@@ -18,7 +18,7 @@ const Login = ({ username, password, updateLoginForm }) => {
     
     return(
         <div className="login">
-            <form className="login-form">
+            <form className="login-form" onSubmit={login}>
                 <label>Username:</label>
                 <input
                     className="username" 
