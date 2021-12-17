@@ -7,8 +7,12 @@ export const setCurrentUser = user => {
 
 export const login = creds => {
     return dispatch => {
-        return fetch("http://localhost:3000/sessions")
-        .then(resp => resp.json())
-        .then(user => console.log(user))
+        return fetch("http://localhost:3000/api/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(creds)
+        })
     }
 }
