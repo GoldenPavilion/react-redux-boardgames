@@ -10,7 +10,7 @@ const Login = ({ username, password }) => {
                     className="username" 
                     type="text"
                     name="username"
-                    value={this.state.username}
+                    value={username}
                     onChange={this.handleOnChange} 
                 />
                 <label>Password:</label>
@@ -18,7 +18,7 @@ const Login = ({ username, password }) => {
                     className="password"
                     type="password"
                     name="password"
-                    value={this.state.password}
+                    value={password}
                     onChange={this.handleOnChange}
                 />
                 <button type="submit" value="Login">Login</button>
