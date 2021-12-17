@@ -6,6 +6,10 @@ class Login extends Component {
         password: ''
     }
 
+    handleOnChange = event => {
+        this.setState({[event.target.name]: event.target.value})
+    }
+    
     
 }
 
