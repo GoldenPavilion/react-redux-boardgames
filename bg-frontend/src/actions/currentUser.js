@@ -6,6 +6,7 @@ export const setCurrentUser = user => {
 };
 
 export const login = creds => {
+    debugger
     return dispatch => {
         return fetch("http://localhost:3000/api/login", {
             method: "POST",

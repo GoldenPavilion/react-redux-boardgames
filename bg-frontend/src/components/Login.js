@@ -17,6 +17,7 @@ const Login = ({ username, password, updateLoginForm, login }) => {
     
     const handleSubmit = event => {
         event.preventDefault();
+        login(username, password)
     }
     
     return(
