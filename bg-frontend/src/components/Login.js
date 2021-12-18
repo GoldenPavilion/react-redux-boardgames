@@ -15,10 +15,13 @@ const Login = ({ username, password, updateLoginForm, login }) => {
         updateLoginForm(updatedData)
     }
     
+    const handleSubmit = event => {
+        event.preventDefault();
+    }
     
     return(
         <div className="login">
-            <form className="login-form" onSubmit={login}>
+            <form className="login-form" onSubmit={handleSubmit}>
                 <label>Username:</label>
                 <input
                     className="username" 
