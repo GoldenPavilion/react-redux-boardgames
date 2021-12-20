@@ -4,21 +4,20 @@ import { updateLoginForm } from '../actions/loginForm'
 import { login } from '../actions/currentUser';
 
 
-const Login = ({ username, password, updateLoginForm, login }) => {
+const Login = ({ loginReducer, updateLoginForm, login }) => {
     
     const handleOnChange = event => {
         const { name, value } = event.target
         const updatedData = {
-            name,
-            value
+            ...loginReducer,
+            [name]: value
         }
         updateLoginForm(updatedData)
     }
     
     const handleSubmit = event => {
-        console.log(username, password)
         event.preventDefault();
-        login(username, password)
+        // login(username, password)
     }
     
     return(
@@ -29,7 +28,7 @@ const Login = ({ username, password, updateLoginForm, login }) => {
                     className="username" 
                     type="text"
                     name="username"
-                    value={username}
+                    value={loginReducer.username}
                     onChange={handleOnChange} 
                 />
                 <label>Password:</label>
@@ -37,7 +36,7 @@ const Login = ({ username, password, updateLoginForm, login }) => {
                     className="password"
                     type="password"
                     name="password"
-                    value={password}
+                    value={loginReducer.password}
                     onChange={handleOnChange}
                 />
                 <button type="submit" value="Login">Login</button>
@@ -49,8 +48,7 @@ const Login = ({ username, password, updateLoginForm, login }) => {
 
 const mapStateToProps = state => {
     return {
-        username: state.loginReducer.username,
-        password: state.loginReducer.password
+        loginReducer: state.loginReducer
     }
 }
 
