@@ -1,12 +1,11 @@
 export const setCurrentUser = user => {
     return {
         type: 'SET_CURRENT_USER',
-        user: user
+        user
     };
 };
 
 export const login = creds => {
-    debugger
     return dispatch => {
         return fetch("http://localhost:3000/api/login", {
             method: "POST",

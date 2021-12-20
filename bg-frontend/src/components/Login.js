@@ -5,7 +5,7 @@ import { login } from '../actions/currentUser';
 
 
 const Login = ({ username, password, updateLoginForm, login }) => {
-
+    
     const handleOnChange = event => {
         const { name, value } = event.target
         const updatedData = {
@@ -16,6 +16,7 @@ const Login = ({ username, password, updateLoginForm, login }) => {
     }
     
     const handleSubmit = event => {
+        console.log(username, password)
         event.preventDefault();
         login(username, password)
     }
