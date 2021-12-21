@@ -17,7 +17,7 @@ const Login = ({ loginReducer, updateLoginForm, login }) => {
     
     const handleSubmit = event => {
         event.preventDefault();
-        // login(username, password)
+        login(loginReducer)
     }
     
     return(

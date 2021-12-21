@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/api/login', to: "sessions#create"
+  get '/api/login', to: "api/sessions#create"
   
   namespace :api do
     resources :users
