@@ -8,7 +8,7 @@ export const setCurrentUser = user => {
 export const login = creds => {
     return dispatch => {
         console.log("Credentials:", creds)
-        return fetch("http://localhost:3000/api/login", {
+        return fetch("http://localhost:3001/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
