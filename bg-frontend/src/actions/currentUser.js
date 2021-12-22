@@ -7,7 +7,6 @@ export const setCurrentUser = user => {
 
 export const login = creds => {
     return dispatch => {
-        
         return fetch("http://localhost:3001/api/login", {
             credentials: "include", 
             method: "POST",
@@ -31,7 +30,7 @@ export const login = creds => {
 
 export const getCurrentUser = () => {
     return dispatch => {
-        return fetch("http://localhost:3000/api/get_current_user", {
+        return fetch("http://localhost:3001/api/get_current_user", {
             credentials: "include", 
             method: "GET",
             headers: {
