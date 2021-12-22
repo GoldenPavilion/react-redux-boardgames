@@ -12,9 +12,6 @@ class Api::SessionsController < ApplicationController
         end
     end
 
-    def destroy
-    end
-
     def get_current_user
         if logged_in?
             render json: current_user
@@ -22,6 +19,12 @@ class Api::SessionsController < ApplicationController
             render json: {
                 error: "No Login"
             }
+        end
+    end
+
+    def destroy
+        if current_user
+            session.destroy
         end
     end
 end
