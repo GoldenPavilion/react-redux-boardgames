@@ -32,6 +32,7 @@ export const getCurrentUser = () => {
     console.log("DISPATCHED");
     return dispatch => {
         return fetch("http://localhost:3000/api/get_current_user", {
+            credentials: "include", 
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
