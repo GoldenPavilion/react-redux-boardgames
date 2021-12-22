@@ -1,5 +1,4 @@
 class Api::SessionsController < ApplicationController
-    include ::ActionController::Cookies
 
     def create
         @user = User.find_by(username: params[:username])
