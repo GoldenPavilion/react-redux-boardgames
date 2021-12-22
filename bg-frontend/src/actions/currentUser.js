@@ -28,6 +28,10 @@ export const login = creds => {
     }
 }
 
+export const logout = () => {
+    
+}
+
 export const getCurrentUser = () => {
     return dispatch => {
         return fetch("http://localhost:3001/api/get_current_user", {
