@@ -28,9 +28,9 @@ export const login = creds => {
     }
 }
 
-export const getCurrentUser = creds => {
+export const getCurrentUser = () => {
     return dispatch => {
-        return fetch("http://localhost:3000/api/login", {
+        return fetch("http://localhost:3000/api/get_current_user", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
