@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(username: "Leonardo", password: "lullaby", email: "leonardo@tmnt.com", location: "New York, NY", game_host: true);
-User.create(username: "Donatello", password: "lullaby", email: "donatello@tmnt.com", location: "New York, NY", game_host: false);
-User.create(username: "Michaelangelo", password: "lullaby", email: "mikey@tmnt.com", location: "New York, NY", game_host: false);
-User.create(username: "Raphael", password: "lullaby", email: "raphael@tmnt.com", location: "New York, NY", game_host: false);
+User.create(username: "Leonardo", password: "password", email: "leonardo@tmnt.com", location: "New York, NY", game_host: true);
+User.create(username: "Donatello", password: "password", email: "donatello@tmnt.com", location: "New York, NY", game_host: false);
+User.create(username: "Michaelangelo", password: "password", email: "mikey@tmnt.com", location: "New York, NY", game_host: false);
+User.create(username: "Raphael", password: "password", email: "raphael@tmnt.com", location: "New York, NY", game_host: false);
 
 Game.create(
     name: "Root", 
