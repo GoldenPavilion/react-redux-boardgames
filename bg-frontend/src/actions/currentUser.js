@@ -36,6 +36,8 @@ export const logout = () => {
                 "Content-Type": "application/json"
             }
         })
+        .then(resp => resp.json())
+        .then(data => console.log(data))
     }
 }
 
