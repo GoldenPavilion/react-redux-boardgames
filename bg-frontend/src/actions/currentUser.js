@@ -7,7 +7,7 @@ export const setCurrentUser = user => {
 
 export const login = creds => {
     return dispatch => {
-        console.log("Credentials:", creds)
+        
         return fetch("http://localhost:3001/api/login", {
             credentials: "include", 
             method: "POST",
@@ -45,8 +45,7 @@ export const getCurrentUser = () => {
             } else {
                 dispatch(setCurrentUser(user))
             }
-        }
-        )
+        })
         .catch(console.log)
     }
 }
