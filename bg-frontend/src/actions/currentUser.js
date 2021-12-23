@@ -22,8 +22,7 @@ export const login = creds => {
             } else {
                 dispatch(setCurrentUser(user))
             }
-        }
-        )
+        })
         .catch(console.log)
     }
 }
@@ -35,6 +34,7 @@ export const clearCurrentUser = () => {
 }
 
 export const logout = () => {
+    dispatch(clearCurrentUser)
     return dispatch => {
         return fetch("http://localhost:3001/api/logout", {
             credentials: "include",
