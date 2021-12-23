@@ -19,4 +19,11 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  console.log(state)
+  return {
+    currentUser: state.currentUserReducer
+  }
+}
+
 export default connect(null, { getCurrentUser } )(App);
