@@ -5,9 +5,14 @@ import { logout } from '../actions/currentUser';
 
 const Logout = ({ logout }) => {
     
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        logout(); 
+    }
+    
     return(
         <div className="logout">
-            <form onSubmit={logout}>
+            <form onSubmit={handleSubmit}>
                 <input type="submit" value="Logout" />
             </form>
         </div>
