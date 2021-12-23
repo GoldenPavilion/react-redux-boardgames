@@ -13,8 +13,7 @@ class App extends Component {
 
   render() {
     return (
-      <Login />,
-      <Logout />
+      this.props.currentUser ? <Logout /> : <Login />
     );
   }
 }
