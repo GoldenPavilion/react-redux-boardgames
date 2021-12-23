@@ -24,7 +24,7 @@ class Api::SessionsController < ApplicationController
 
     def destroy
         if current_user
-            session.destroy
+            session.clear
         end
     end
 end
