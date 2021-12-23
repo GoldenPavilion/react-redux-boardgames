@@ -31,6 +31,7 @@ export const login = creds => {
 export const logout = () => {
     return dispatch => {
         return fetch("http://localhost:3001/api/logout", {
+            credentials: "include",
             method: "DELETE", 
             headers: {
                 "Content-Type": "application/json"
