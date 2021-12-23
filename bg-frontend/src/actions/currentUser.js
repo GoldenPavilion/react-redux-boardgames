@@ -34,14 +34,11 @@ export const clearCurrentUser = () => {
 }
 
 export const logout = () => {
-    dispatch(clearCurrentUser)
+    dispatch(clearCurrentUser())
     return dispatch => {
         return fetch("http://localhost:3001/api/logout", {
             credentials: "include",
             method: "DELETE", 
-            headers: {
-                "Content-Type": "application/json"
-            }
         })
         .then(resp => resp.json())
         .then(data => console.log(data))
