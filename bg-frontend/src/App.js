@@ -1,7 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import Login from "./components/Login";
-import Logout from "./components/Logout";
+import NavBar from "./components/NavBar";
 import { connect } from 'react-redux';
 import { getCurrentUser } from "./actions/currentUser";
 
@@ -13,7 +12,7 @@ class App extends Component {
 
   render() {
     return (
-      this.props.currentUser ? <Logout /> : <Login />
+      <NavBar />
     );
   }
 }
