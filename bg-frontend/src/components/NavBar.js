@@ -1,14 +1,20 @@
 import React from 'react';
-import { conect } from 'react-redux';
+import { connect } from 'react-redux';
 import { Login } from './components/Login'
 import { Logout } from './components/Logout'
 
 const NavBar = () => {
     return(
         <div className="nav-bar">
-        
+            this.props.currentUser ? <Logout /> : <Login />
         </div>
     )
 }
 
-export default NavBar;
+const mapStateToProps = state => {
+   return {
+     currentUser: state.currentUserReducer
+   }
+}
+
+export default connect(mapStateToProps)(NavBar);
