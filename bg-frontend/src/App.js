@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import NavBar from "./components/NavBar";
+import NavBar from './components/NavBar.js';
 import { connect } from 'react-redux';
 import { getCurrentUser } from "./actions/currentUser";
 
