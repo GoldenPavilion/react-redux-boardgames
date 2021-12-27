@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { updateSignUpForm } from '../actions/signUpForm';
 
 
-const SignUp = () => {
+const SignUp = ({ newUserReducer, updateSignUpForm }) => {
+
     return(
         <div className="sign-up">
             <form className="signup-form">
