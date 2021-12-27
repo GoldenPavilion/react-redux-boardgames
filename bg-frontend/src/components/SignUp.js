@@ -5,6 +5,16 @@ import { updateSignUpForm } from '../actions/signUpForm';
 
 const SignUp = ({ newUserReducer, updateSignUpForm }) => {
 
+    const handleOnChange = event => {
+        const { name, value } = event.target
+        const updatedData = {
+            ...newUserReducer, 
+            [name]: value
+        }
+        updateSignUpForm(updatedData)
+    }
+    
+    
     return(
         <div className="sign-up">
             <form className="signup-form">
