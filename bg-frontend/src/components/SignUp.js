@@ -42,4 +42,10 @@ const SignUp = () => {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+        newUserReducer: state.newUserReducer
+    }
+}
+
 export default SignUp;
