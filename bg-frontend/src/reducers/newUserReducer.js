@@ -3,7 +3,7 @@ const initState = {
     password: "",
     email: "",
     location: "",
-    host: ""
+    host: false
 }
 
 const newUserReducer = (state = initState, action) => {
