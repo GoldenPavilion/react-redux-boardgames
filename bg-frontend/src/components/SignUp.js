@@ -51,10 +51,13 @@ const SignUp = ({ newUserReducer, updateSignUpForm }) => {
                     onChange={handleOnChange}
                 />
                 <label>Would You Like To Host?:</label>
-                <select className="host" name="host" onChange={handleOnChange}>
-                    <option ngValue="false">No</option>
-                    <option ngValue="true">Yes</option>
-                </select>
+                <input 
+                    className="host" 
+                    type="checkbox" 
+                    name="host" 
+                    value={newUserReducer.host}
+                    onChange={handleOnChange}
+                />
                 <button type="submit" value="Sign Up">Sign Up</button>
             </form>
         </div>
