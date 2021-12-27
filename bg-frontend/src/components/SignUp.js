@@ -31,7 +31,7 @@ const SignUp = () => {
                 <label>Would You Like To Host?:</label>
                 <select className="host" name="host">
                     <option value="No">No</option>
-                    <option value="Yes">No</option>
+                    <option value="Yes">Yes</option>
                 </select>
                 <button type="submit" value="Sign Up">Sign Up</button>
             </form>
