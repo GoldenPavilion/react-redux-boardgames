@@ -17,7 +17,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm }) => {
                 <label>Password:</label>
                 <input 
                     className="password"
-                    type="text"
+                    type="password"
                     name="password"
                 />
                 <label>Email:</label>
