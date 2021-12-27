@@ -14,7 +14,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm }) => {
         updateSignUpForm(updatedData)
     }
     
-    
+
     return(
         <div className="sign-up">
             <form className="signup-form">
@@ -23,29 +23,37 @@ const SignUp = ({ newUserReducer, updateSignUpForm }) => {
                     className="username"
                     type="text"
                     name="username"
+                    value={newUserReducer.username}
+                    onChange={handleOnChange}
                 />
                 <label>Password:</label>
                 <input 
                     className="password"
                     type="password"
                     name="password"
+                    value={newUserReducer.password}
+                    onChange={handleOnChange}
                 />
                 <label>Email:</label>
                 <input 
                     className="email"
                     type="text"
                     name="email"
+                    value={newUserReducer.email}
+                    onChange={handleOnChange}
                 />
                 <label>Location:</label>
                 <input 
                     className="location"
                     type="text"
                     name="location"
+                    value={newUserReducer.location}
+                    onChange={handleOnChange}
                 />
                 <label>Would You Like To Host?:</label>
-                <select className="host" name="host">
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
+                <select className="host" name="host" onChange={handleOnChange}>
+                    <option ngValue="false">No</option>
+                    <option ngValue="true">Yes</option>
                 </select>
                 <button type="submit" value="Sign Up">Sign Up</button>
             </form>
