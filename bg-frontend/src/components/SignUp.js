@@ -31,7 +31,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitForm }) => {
 
     return(
         <div className="sign-up">
-            <form className="signup-form">
+            <form className="signup-form" onSubmit={handleSubmit}>
                 <label>Username:</label>
                 <input 
                     className="username"
