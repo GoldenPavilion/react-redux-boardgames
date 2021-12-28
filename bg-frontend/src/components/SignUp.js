@@ -15,6 +15,14 @@ const SignUp = ({ newUserReducer, updateSignUpForm }) => {
     }
     
 
+    const handleCheck = event => {
+        if (event.target.checked){
+            newUserReducer.host = true
+        } else {
+            newUserReducer.host = false
+        }
+    }
+
     return(
         <div className="sign-up">
             <form className="signup-form">
@@ -55,8 +63,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm }) => {
                     className="host" 
                     type="checkbox" 
                     name="host" 
-                    value={newUserReducer.host}
-                    onChange={handleOnChange}
+                    onChange={handleCheck}
                 />
                 <button type="submit" value="Sign Up">Sign Up</button>
             </form>
