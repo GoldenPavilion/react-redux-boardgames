@@ -18,9 +18,9 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitForm }) => {
 
     const handleCheck = event => {
         if (event.target.checked){
-            newUserReducer.host = true
+            newUserReducer.game_host = true
         } else {
-            newUserReducer.host = false
+            newUserReducer.game_host = false
         }
     }
     
@@ -66,9 +66,9 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitForm }) => {
                 />
                 <label>Would You Like To Host?:</label>
                 <input 
-                    className="host" 
+                    className="game_host" 
                     type="checkbox" 
-                    name="host" 
+                    name="game_host" 
                     onChange={handleCheck}
                 />
                 <button type="submit" value="Sign Up">Sign Up</button>
