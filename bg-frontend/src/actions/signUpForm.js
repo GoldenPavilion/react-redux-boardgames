@@ -4,3 +4,20 @@ export const updateSignUpForm = formData => {
         formData
     }
 }
+
+export const submitForm = formData => {
+    return dispatch => {
+        return fetch("http://localhost:3001/api/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(resp => resp.json())
+        .then(user => {
+            console.log(user)
+        })
+        .catch(console.log)
+    }
+}
