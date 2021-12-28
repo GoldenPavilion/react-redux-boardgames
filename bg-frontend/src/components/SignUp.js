@@ -24,6 +24,11 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitForm }) => {
         }
     }
     
+    const handleSubmit = event => {
+        event.preventDefault();
+        submitForm(newUserReducer)
+    }
+
     return(
         <div className="sign-up">
             <form className="signup-form">
