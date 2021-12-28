@@ -7,7 +7,7 @@ export const updateSignUpForm = formData => {
 
 export const submitForm = formData => {
     return dispatch => {
-        return fetch("http://localhost:3001/api/users", {
+        return fetch("http://localhost:3001/api/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -15,9 +15,6 @@ export const submitForm = formData => {
             body: JSON.stringify(formData)
         })
         .then(resp => resp.json())
-        .then(user => {
-            console.log(user)
-        })
-        .catch(console.log)
+        .then(user => console.log(user))
     }
 }
