@@ -25,7 +25,6 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitForm }) => {
     }
     
     const handleSubmit = event => {
-        debugger
         event.preventDefault();
         submitForm(newUserReducer)
     }
