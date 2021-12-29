@@ -5,6 +5,7 @@ import Logout from './Logout'
 import SignUp from './SignUp'
 
 const NavBar = ({ currentUser }) => {
+
     return(
         <div className="nav-bar">
             { currentUser ? <p>Hello { currentUser.username }</p> : ""}
