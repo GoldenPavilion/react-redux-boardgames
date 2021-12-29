@@ -1,3 +1,5 @@
+import { resetLoginForm } from './loginForm'
+
 export const setCurrentUser = user => {
     return {
         type: 'SET_CURRENT_USER',
@@ -21,6 +23,7 @@ export const login = creds => {
                 alert(response.error)
             } else {
                 dispatch(setCurrentUser(response.data))
+                dispatch(resetLoginForm())
             }
         })
         .catch(console.log)
