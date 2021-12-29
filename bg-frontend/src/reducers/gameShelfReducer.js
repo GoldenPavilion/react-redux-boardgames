@@ -4,3 +4,5 @@ const gameShelfReducer = (state = [], action) => {
             return state
     }
 }
+
+export default gameShelfReducer;
