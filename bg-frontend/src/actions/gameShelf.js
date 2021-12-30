@@ -7,13 +7,14 @@ export const setGameShelf = games => {
 
 export const getGameShelf = () => {
     return dispatch => {
-        return fetch("http://localhost:3000/api/games", {
+        return fetch("http://localhost:3001/api/games", {
             credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
             }
-            .then(resp => resp.json())
+        })
+        .then(resp => resp.json())
             .then(response => {
                 if (response.error) {
                     alert(response.error)
@@ -22,6 +23,5 @@ export const getGameShelf = () => {
                 }
             })
             .catch(console.log)
-        })
     }
 }
