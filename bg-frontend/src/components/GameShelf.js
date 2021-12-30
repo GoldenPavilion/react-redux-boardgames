@@ -9,4 +9,10 @@ const GameShelf = () => {
     )
 }
 
-export default GameShelf;
+const mapStateToProps = state => {
+    return {
+        games: state.games,
+    }
+}
+
+export default connect(mapStateToProps)(GameShelf);
