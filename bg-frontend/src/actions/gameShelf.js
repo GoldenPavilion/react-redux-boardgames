@@ -5,6 +5,12 @@ export const setGameShelf = games => {
     }
 }
 
+export const resetGameShelf = () => {
+    return {
+        type: 'RESET_GAME_SHELF'
+    }
+}
+
 export const getGameShelf = () => {
     return dispatch => {
         return fetch("http://localhost:3001/api/my_games", {
