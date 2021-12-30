@@ -11,7 +11,7 @@ const GameShelf = () => {
 
 const mapStateToProps = state => {
     return {
-        games: state.games,
+        games: state.gameShelfReducer,
     }
 }
 
