@@ -4,3 +4,10 @@ export const setGameShelf = games => {
         games
     }
 }
+
+export const getGameShelf = games => {
+    return {
+        type: "GET_GAME_SHELF",
+        games
+    }
+}

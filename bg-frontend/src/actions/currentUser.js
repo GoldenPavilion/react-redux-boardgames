@@ -24,7 +24,7 @@ export const login = creds => {
             } else {
                 dispatch(setCurrentUser(response.data))
                 dispatch(resetLoginForm())
-                dispatch(getGameShelf)
+                dispatch(getGameShelf())
             }
         })
         .catch(console.log)
