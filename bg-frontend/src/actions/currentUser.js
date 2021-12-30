@@ -1,5 +1,6 @@
-import { resetLoginForm } from './loginForm'
-import { getGameShelf } from './gameShelf'
+import { resetLoginForm } from './loginForm';
+import { getGameShelf } from './gameShelf';
+import { resetGameShelf } from './gameShelf';
 
 export const setCurrentUser = user => {
     return {
@@ -44,6 +45,14 @@ export const logout = () => {
         return fetch("http://localhost:3001/api/logout", {
             credentials: "include",
             method: "DELETE", 
+        })
+        .then(resp => resp.json())
+        .then(response => {
+            if (response.error){
+                alert(response.error)
+            } else {
+                dispatch(resetGameShelf())
+            }
         })
     }
 }
