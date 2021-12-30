@@ -25,7 +25,6 @@ export const getGameShelf = () => {
                 if (response.error) {
                     alert(response.error)
                 } else {
-                    debugger
                     dispatch(setGameShelf(response.data))
                 }
             })
