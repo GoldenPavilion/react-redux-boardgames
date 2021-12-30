@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   post '/api/login', to: "api/sessions#create"
   post '/api/signup', to: "api/users#create"
   get '/api/get_current_user', to: "api/sessions#get_current_user"
+  get '/api/my_games', to: "api/games#my_games"
   delete '/api/logout', to: "api/sessions#destroy"
 
   
