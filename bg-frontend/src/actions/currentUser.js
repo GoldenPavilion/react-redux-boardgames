@@ -42,17 +42,10 @@ export const clearCurrentUser = () => {
 export const logout = () => {
     return dispatch => {
         dispatch(clearCurrentUser())
+        dispatch(resetGameShelf())
         return fetch("http://localhost:3001/api/logout", {
             credentials: "include",
             method: "DELETE", 
-        })
-        .then(resp => resp.json())
-        .then(response => {
-            if (response.error){
-                alert(response.error)
-            } else {
-                dispatch(resetGameShelf())
-            }
         })
     }
 }
