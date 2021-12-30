@@ -1,4 +1,5 @@
 import { resetLoginForm } from './loginForm'
+import { getGameShelf } from './gameShelf'
 
 export const setCurrentUser = user => {
     return {
