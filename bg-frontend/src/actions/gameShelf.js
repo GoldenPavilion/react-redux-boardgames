@@ -7,7 +7,7 @@ export const setGameShelf = games => {
 
 export const getGameShelf = () => {
     return dispatch => {
-        return fetch("http://localhost:3001/api/games", {
+        return fetch("http://localhost:3001/api/my_games", {
             credentials: "include",
             method: "GET",
             headers: {
@@ -19,7 +19,7 @@ export const getGameShelf = () => {
                 if (response.error) {
                     alert(response.error)
                 } else {
-                    console.log(response.data)
+                    debugger
                     dispatch(setGameShelf(response.data))
                 }
             })
