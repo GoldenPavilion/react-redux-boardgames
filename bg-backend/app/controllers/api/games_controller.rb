@@ -1,7 +1,18 @@
 class Api::GamesController < ApplicationController
     def index
-        @games = current_user.games
+        @games = Game.all
         render json: GameSerializer.new(@games)
+    end
+
+    def my_games
+        if logged_in?
+            @myGames = current_user.games
+            render json: GameSerializer.new(@myGames)
+        else
+            render json: {
+                error: "Login to see your games."
+            }
+        end
     end
 
     def show

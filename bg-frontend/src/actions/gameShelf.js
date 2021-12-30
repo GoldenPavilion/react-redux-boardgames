@@ -19,6 +19,7 @@ export const getGameShelf = () => {
                 if (response.error) {
                     alert(response.error)
                 } else {
+                    console.log(response.data)
                     dispatch(setGameShelf(response.data))
                 }
             })
