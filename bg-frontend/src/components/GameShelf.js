@@ -4,7 +4,7 @@ import GameCard from './GameCard';
 
 const GameShelf = props => {
     const myGames = props.games.length > 0 ? 
-        props.games.forEach(game => <GameCard />) : null
+        props.games.forEach(game => <GameCard key={game.id} game={game} />) : null
 
     return myGames
 }
