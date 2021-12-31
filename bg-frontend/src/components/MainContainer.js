@@ -5,8 +5,7 @@ import GameShelf from './GameShelf';
 const MainContainer = ({ currentUser }) => {
     return(
         <div className="main-container">
-            <p>THE BODY OF THE APP</p>
-            <GameShelf />
+            { currentUser ? <GameShelf /> : <p>THE BODY OF THE APP</p>}
         </div>
     )
 }
