@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const GameShelf = () => {
+const GameShelf = props => {
+    console.log(props)
     return(
         <div className="game-shelf">
 
