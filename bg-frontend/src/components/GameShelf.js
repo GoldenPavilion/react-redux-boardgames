@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import GameCard from './GameCard';
 
 const GameShelf = props => {
     const myGames = props.games.length > 0 ? 
