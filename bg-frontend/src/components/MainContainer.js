@@ -17,4 +17,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default MainContainer;
+export default connect(mapStateToProps)(MainContainer);
