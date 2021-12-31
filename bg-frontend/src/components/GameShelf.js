@@ -2,12 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const GameShelf = props => {
-    console.log(props)
-    return(
-        <div className="game-shelf">
+    const myGames = props.games.length > 0 ? 
+        props.games.forEach(game => <Game />) : null
 
-        </div>
-    )
+    return myGames
 }
 
 const mapStateToProps = state => {
