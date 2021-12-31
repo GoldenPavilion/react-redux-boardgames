@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const GameShelf = props => {
     const myGames = props.games.length > 0 ? 
-        props.games.forEach(game => <Game />) : null
+        props.games.forEach(game => <GameCard />) : null
 
     return myGames
 }
