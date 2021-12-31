@@ -11,8 +11,7 @@ const GameShelf = props => {
 
 const mapStateToProps = state => {
     return {
-        games: state.gameShelfReducer,
-        currentUser: state.currentUserReducer
+        games: state.gameShelfReducer
     }
 }
 
