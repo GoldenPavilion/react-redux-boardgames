@@ -11,4 +11,10 @@ const MainContainer = () => {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+        currentUser: state.currentUserReducer
+    }
+}
+
 export default MainContainer;
