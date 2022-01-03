@@ -16,6 +16,10 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+          <Router>
+            <Route />
+            <Route />
+          </Router>
         <MainContainer />
       </div>
     );
