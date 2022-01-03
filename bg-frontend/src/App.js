@@ -6,7 +6,7 @@ import Login from './components/Login.js';
 import SignUp from './components/SignUp.js';
 import { connect } from 'react-redux';
 import { getCurrentUser } from "./actions/currentUser";
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 class App extends Component {
 
@@ -19,8 +19,10 @@ class App extends Component {
       <Router>
       <div className="App">
         <NavBar />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/signup' component={SignUp} />
+            <Routes>
+              <Route exact path='/login' component={Login} />
+              <Route exact path='/signup' component={SignUp} />
+            </Routes>
         <MainContainer />
       </div>
       </Router>
