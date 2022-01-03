@@ -4,6 +4,7 @@ import NavBar from './components/NavBar.js';
 import MainContainer from './components/MainContainer.js'
 import { connect } from 'react-redux';
 import { getCurrentUser } from "./actions/currentUser";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
 
