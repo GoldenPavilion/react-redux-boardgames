@@ -32,4 +32,11 @@ class App extends Component {
   }
 }
 
-export default connect(null, { getCurrentUser } )(App);
+const mapStateToProps = state => {
+  return ({
+    loggedIn: !!state.currentUserReducer
+  })
+}
+
+
+export default connect(mapStateToProps, { getCurrentUser } )(App);
