@@ -54,7 +54,15 @@ export const submitSignUp = formData => {
             body: JSON.stringify(userData)
         })
         .then(resp => resp.json())
-        .then(user => console.log(user))
+        .then(response => {
+            if (response.error){
+                alert(response.error)
+            } else {
+                dispatch(setCurrentUser(response.data))
+                dispatch(resetSignUpForm())
+                dispatch(getGameShelf())
+            }
+        })
     }
 }
 
