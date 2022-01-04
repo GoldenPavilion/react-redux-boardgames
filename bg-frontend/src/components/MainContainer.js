@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import GameShelf from './GameShelf';
+import ProfileContainer from './ProfileContainer';
 import Home from './Home'
 
 const MainContainer = ({ currentUser }) => {
     return(
         <div className="main-container">
-            { currentUser ? <GameShelf /> : <Home />}
+            { currentUser ? <ProfileContainer /> : <Home />}
         </div>
     )
 }

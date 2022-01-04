@@ -5,3 +5,5 @@ const ProfileContainer = () => {
         <div></div>
     )
 }
+
+export default ProfileContainer;
