@@ -42,13 +42,16 @@ export const login = creds => {
 
 export const submitSignUp = formData => {
     return dispatch => {
+        const userData = {
+            user: formData
+        }
         return fetch("http://localhost:3001/api/signup", {
             credentials: "include",    
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(userData)
         })
         .then(resp => resp.json())
         .then(user => console.log(user))

@@ -26,7 +26,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
     
     const handleSubmit = event => {
         event.preventDefault();
-        submitForm(newUserReducer)
+        submitSignUp(newUserReducer)
     }
 
     return(
