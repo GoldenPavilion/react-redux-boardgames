@@ -3,6 +3,7 @@ import GameShelf from './GameShelf';
 import UserProfile from './UserProfile';
 
 const ProfileContainer = () => {
+    debugger
     return(
         <div className="profile-container">
             <UserProfile />

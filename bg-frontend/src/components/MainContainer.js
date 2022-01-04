@@ -6,7 +6,7 @@ import Home from './Home'
 const MainContainer = ({ currentUser }) => {
     return(
         <div className="main-container">
-            { currentUser ? <ProfileContainer /> : <Home />}
+            { currentUser ? <ProfileContainer key={currentUser.id} user={currentUser} /> : <Home />}
         </div>
     )
 }
