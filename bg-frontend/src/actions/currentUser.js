@@ -9,6 +9,12 @@ export const setCurrentUser = user => {
     };
 };
 
+export const clearCurrentUser = () => {
+    return {
+        type: 'CLEAR_CURRENT_USER'
+    }
+}
+
 export const login = creds => {
     return dispatch => {
         return fetch("http://localhost:3001/api/login", {
@@ -33,9 +39,18 @@ export const login = creds => {
     }
 }
 
-export const clearCurrentUser = () => {
-    return {
-        type: 'CLEAR_CURRENT_USER'
+export const submitSignUp = formData => {
+    return dispatch => {
+        return fetch("http://localhost:3001/api/signup", {
+            credentials: "include",    
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(resp => resp.json())
+        .then(user => console.log(user))
     }
 }
 
