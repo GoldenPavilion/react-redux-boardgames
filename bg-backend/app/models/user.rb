@@ -6,5 +6,6 @@ class User < ApplicationRecord
     has_many :user_games
     has_many :games, through: :user_games
 
-    validates :username, :email, :location, presence: true
+    validates :username, :email, uniqueness: true, presence: true
+    validates :location, presence: true
 end
