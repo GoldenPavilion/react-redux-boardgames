@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const UserProfile = props => {
     return(
@@ -6,4 +7,10 @@ const UserProfile = props => {
     )
 }
 
-export default UserProfile;
+const mapStateToProps = state => {
+    return {
+        user: state.currentUserReducer
+    }
+}
+
+export default connect(mapStateToProps)(UserProfile);
