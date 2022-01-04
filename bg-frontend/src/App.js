@@ -15,14 +15,15 @@ class App extends Component {
   }
   
   render() {
+    const { loggedIn } = this.props
     return (
       <Router>
       <div className="App">
         <NavBar />
             <Routes>
               <Route exact path="/" />
-              <Route exact path='/login' element={<Login />} />
-              <Route exact path='/signup' element={<SignUp />} />
+              {!loggedIn ? <Route exact path='/login' element={<Login />} /> : ""}
+              {!loggedIn ? <Route exact path='/signup' element={<SignUp />} /> : ""}
               <Route exact path='/games' />
             </Routes>
         <MainContainer />
