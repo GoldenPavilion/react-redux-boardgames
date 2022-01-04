@@ -5,6 +5,12 @@ export const updateSignUpForm = formData => {
     }
 }
 
+export const resetSignUpForm = () => {
+    return {
+        type: 'RESET_SIGNUP_FORM'
+    }
+}
+
 export const submitForm = formData => {
     return dispatch => {
         return fetch("http://localhost:3001/api/signup", {
