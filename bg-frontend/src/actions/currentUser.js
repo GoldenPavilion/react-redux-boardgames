@@ -1,4 +1,5 @@
 import { resetLoginForm } from './loginForm';
+import { resetSignUpForm } from './signUpForm';
 import { getGameShelf } from './gameShelf';
 import { resetGameShelf } from './gameShelf';
 

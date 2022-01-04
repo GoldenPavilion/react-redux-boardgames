@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { updateSignUpForm } from '../actions/signUpForm';
-import { submitForm } from '../actions/signUpForm';
+import { submitSignUp } from '../actions/currentUser';
 
 
-const SignUp = ({ newUserReducer, updateSignUpForm, submitForm }) => {
+const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
 
     const handleOnChange = event => {
         const { name, value } = event.target
@@ -83,4 +83,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { updateSignUpForm, submitForm })(SignUp);
+export default connect(mapStateToProps, { updateSignUpForm, submitSignUp })(SignUp);
