@@ -9,10 +9,6 @@ const NavBar = ({ currentUser }) => {
         <div className="nav-bar">
             { currentUser ? <p>Hello { currentUser.attributes.username }</p> : ""}
             { currentUser ? <Logout /> : ""}
-            <button>Login</button>
-            <button>Sign Up</button>
-            {/* { currentUser ? <Logout /> : <Login /> }
-            { currentUser ? <div /> : <SignUp /> }*/}
         </div>
     )
 }
