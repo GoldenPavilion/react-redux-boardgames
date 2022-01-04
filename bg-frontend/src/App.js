@@ -20,8 +20,8 @@ class App extends Component {
       <div className="App">
         <NavBar />
             <Routes>
-              <Route exact path='/login' component={Login} />
-              <Route exact path='/signup' component={SignUp} />
+              <Route exact path='/login' element={<Login />} />
+              <Route exact path='/signup' element={<SignUp />} />
             </Routes>
         <MainContainer />
       </div>
