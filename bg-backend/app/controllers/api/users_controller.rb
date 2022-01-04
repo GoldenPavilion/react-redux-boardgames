@@ -17,7 +17,9 @@ class Api::UsersController < ApplicationController
       session[:user_id] = @user.id
       render json: UserSerializer.new(@user)
     else
-      render json: @user.errors.full_messages.to_sentence
+      render json: {
+                error: "Username and E-mail must be unique."
+            }
     end
   end
 
