@@ -1,6 +1,9 @@
 const Home = () => {
     return(
-        <div></div>
+        <div>
+            <h3>Welcome to BoardGameShelf!</h3>
+            <p>Login or Signup to start your collection.</p>
+        </div>
     )
 }
 
