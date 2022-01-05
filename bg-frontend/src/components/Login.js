@@ -31,6 +31,7 @@ const Login = ({ loginReducer, updateLoginForm, login }) => {
                     value={loginReducer.username}
                     onChange={handleOnChange} 
                 />
+                <br />
                 <label>Password:</label>
                 <input 
                     className="password"
@@ -39,6 +40,7 @@ const Login = ({ loginReducer, updateLoginForm, login }) => {
                     value={loginReducer.password}
                     onChange={handleOnChange}
                 />
+                <br />
                 <button type="submit" value="Login">Login</button>
             </form>
         </div>

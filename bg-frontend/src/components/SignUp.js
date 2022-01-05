@@ -40,6 +40,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
                     value={newUserReducer.username}
                     onChange={handleOnChange}
                 />
+                <br />
                 <label>Password:</label>
                 <input 
                     className="password"
@@ -48,6 +49,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
                     value={newUserReducer.password}
                     onChange={handleOnChange}
                 />
+                <br />
                 <label>Email:</label>
                 <input 
                     className="email"
@@ -56,6 +58,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
                     value={newUserReducer.email}
                     onChange={handleOnChange}
                 />
+                <br />
                 <label>Location:</label>
                 <input 
                     className="location"
@@ -64,6 +67,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
                     value={newUserReducer.location}
                     onChange={handleOnChange}
                 />
+                <br />
                 <label>Would You Like To Host?:</label>
                 <input 
                     className="game_host" 
@@ -71,6 +75,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
                     name="game_host" 
                     onChange={handleCheck}
                 />
+                <br />
                 <button type="submit" value="Sign Up">Sign Up</button>
             </form>
         </div>
