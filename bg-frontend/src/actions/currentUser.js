@@ -2,6 +2,7 @@ import { resetLoginForm } from './loginForm';
 import { resetSignUpForm } from './signUpForm';
 import { getGameShelf } from './gameShelf';
 import { resetGameShelf } from './gameShelf';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export const setCurrentUser = user => {
     return {
@@ -16,7 +17,7 @@ export const clearCurrentUser = () => {
     }
 }
 
-export const login = (creds, history) => {
+export const login = (creds, navigate) => {
     return dispatch => {
         return fetch("http://localhost:3001/api/login", {
             credentials: "include", 
@@ -34,7 +35,7 @@ export const login = (creds, history) => {
                 dispatch(setCurrentUser(response.data))
                 dispatch(resetLoginForm())
                 dispatch(getGameShelf())
-                history.push('/')
+                navigate('/')
             }
         })
         .catch(console.log)
