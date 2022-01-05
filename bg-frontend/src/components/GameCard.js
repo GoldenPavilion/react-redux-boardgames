@@ -10,6 +10,7 @@ const GameCard = props => {
             <p>Players: { game.min_players } - { game.max_players }</p>
             <p>Play Time: { game.min_playtime } - { game.max_playtime }</p>
             <p>Description: { game.description_preview }</p>
+            {/** <button onClick={addGameToShelf}>Add To Shelf</button> **/}
         </div>
     )
 }
