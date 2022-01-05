@@ -1,19 +1,6 @@
-export const setGameShelf = games => {
-    return {
-        type: "SET_GAME_SHELF",
-        games
-    }
-}
-
-export const resetGameShelf = () => {
-    return {
-        type: 'RESET_GAME_SHELF'
-    }
-}
-
-export const getGameShelf = () => {
+export const getAllGames = () => {
     return dispatch => {
-        return fetch("http://localhost:3001/api/my_games", {
+        return fetch("http://localhost:3001/api/games", {
             credentials: "include",
             method: "GET",
             headers: {
