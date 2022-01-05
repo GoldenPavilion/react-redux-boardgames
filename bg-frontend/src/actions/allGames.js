@@ -1,3 +1,11 @@
+export const setAllGames = games => {
+    return {
+        type: "SET_ALL_GAMES",
+        games
+    }
+}
+
+
 export const getAllGames = () => {
     return dispatch => {
         return fetch("http://localhost:3001/api/games", {
@@ -12,7 +20,7 @@ export const getAllGames = () => {
                 if (response.error) {
                     alert(response.error)
                 } else {
-                    dispatch(setGameShelf(response.data))
+                    dispatch(setAllGames(response.data))
                 }
             })
             .catch(console.log)

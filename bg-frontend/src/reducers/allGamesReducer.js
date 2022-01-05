@@ -1,6 +1,6 @@
 const allGamesReducer = (state = [], action) => {
     switch(action.type) {
-        case "GET_ALL_USERS":
+        case "SET_ALL_GAMES":
             return action.games
         default:
             return state
