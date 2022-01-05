@@ -7,12 +7,13 @@ import SignUp from './components/SignUp.js';
 import AllGames from './components/AllGames.js'
 import { connect } from 'react-redux';
 import { getCurrentUser } from "./actions/currentUser";
+import { getAllGames } from "./actions/allGames";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 class App extends Component {
-  
   componentDidMount() {
     this.props.getCurrentUser()
+    this.props.getAllGames()
   }
   
   render() {
@@ -40,4 +41,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { getCurrentUser } )(App);
+export default connect(mapStateToProps, { getCurrentUser, getAllGames } )(App);

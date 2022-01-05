@@ -1,7 +1,6 @@
 import { resetLoginForm } from './loginForm';
 import { resetSignUpForm } from './signUpForm';
 import { getGameShelf } from './gameShelf';
-import { getAllGames } from './allGames';
 import { resetGameShelf } from './gameShelf';
 
 export const setCurrentUser = user => {
@@ -35,7 +34,6 @@ export const login = (creds, history) => {
                 dispatch(setCurrentUser(response.data))
                 dispatch(resetLoginForm())
                 dispatch(getGameShelf())
-                dispatch(getAllGames())
                 history.push('/')
             }
         })
