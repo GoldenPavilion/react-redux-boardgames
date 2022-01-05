@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Logout from './Logout'
+import { Link } from 'react-router-dom';
 
 
 const NavBar = ({ currentUser }) => {
     return(
         <div className="nav-bar">
-            { currentUser ? <p>Hello { currentUser.attributes.username }</p> : ""}
             { currentUser ? <Logout /> : ""}
         </div>
     )
