@@ -4,6 +4,7 @@ import NavBar from './components/NavBar.js';
 import MainContainer from './components/MainContainer.js';
 import Login from './components/Login.js';
 import SignUp from './components/SignUp.js';
+import AllGames from './components/AllGames.js'
 import { connect } from 'react-redux';
 import { getCurrentUser } from "./actions/currentUser";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -24,7 +25,7 @@ class App extends Component {
               <Route exact path="/" element={<MainContainer />} />
               {!loggedIn ? <Route exact path='/login' element={<Login />} /> : ""}
               {!loggedIn ? <Route exact path='/signup' element={<SignUp />} /> : ""}
-              <Route exact path='/games' />
+              <Route exact path='/games' element={<AllGames />} />
             </Routes>
       </div>
       </Router>
