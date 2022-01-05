@@ -6,7 +6,7 @@ const UserProfile = props => {
     
     return(
         <div className="user-profile">
-            <h3>{ user.username }</h3>
+            { user.game_host ? <h3>{ user.username }(Host)</h3> : <h3>{ user.username }</h3>}        
             <p>Location: { user.location} </p>
             <p>Contact: { user.email }</p>
         </div>

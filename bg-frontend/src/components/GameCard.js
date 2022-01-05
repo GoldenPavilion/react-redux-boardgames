@@ -5,7 +5,7 @@ const GameCard = props => {
     
     return (
         <div className="game-card">
-            <h3>Name: { game.name } ({ game.year_published})</h3>
+            <h3>{ game.name } ({ game.year_published})</h3>
             <img src={ game.img } alt="Game Title"></img>
             <p>Players: { game.min_players } - { game.max_players }</p>
             <p>Play Time: { game.min_playtime } - { game.max_playtime }</p>
