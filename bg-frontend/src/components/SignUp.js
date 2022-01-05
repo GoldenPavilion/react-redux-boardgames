@@ -2,10 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateSignUpForm } from '../actions/signUpForm';
 import { submitSignUp } from '../actions/currentUser';
+import { useNavigate } from 'react-router-dom';
 
 
 const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
-
+    const navigate = useNavigate();
     const handleOnChange = event => {
         const { name, value } = event.target
         const updatedData = {
@@ -26,7 +27,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
     
     const handleSubmit = event => {
         event.preventDefault();
-        submitSignUp(newUserReducer)
+        submitSignUp(newUserReducer, navigate)
     }
 
     return(
