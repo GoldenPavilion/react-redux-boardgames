@@ -9,6 +9,7 @@ const NavBar = ({ currentUser }) => {
             <Link to="/">Home </Link>
             { !currentUser ? <Link to="/login">Login </Link> : ""}
             { !currentUser ? <Link to="/signup">Sign Up</Link> : ""}
+            { currentUser ? <Link to="/games">Games</Link> : ""} 
         </div>
     )
 }
