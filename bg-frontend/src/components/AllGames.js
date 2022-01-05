@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import GameCard from './GameCard';
 
 const AllGames = props => {
-    const myGames = props.games ? 
-        props.games.map(game => <GameCard key={game.id} game={game} />) : <div />
+    const allGames = props.allGames ? 
+        props.allGames.map(game => <GameCard key={game.id} game={game} />) : <div />
     
-    return myGames
+    return allGames
 }
 
 const mapStateToProps = state => {

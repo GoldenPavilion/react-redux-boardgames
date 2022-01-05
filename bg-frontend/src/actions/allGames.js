@@ -5,7 +5,6 @@ export const setAllGames = games => {
     }
 }
 
-
 export const getAllGames = () => {
     return dispatch => {
         return fetch("http://localhost:3001/api/games", {
@@ -16,13 +15,13 @@ export const getAllGames = () => {
             }
         })
         .then(resp => resp.json())
-            .then(response => {
-                if (response.error) {
-                    alert(response.error)
-                } else {
-                    dispatch(setAllGames(response.data))
-                }
-            })
-            .catch(console.log)
+        .then(response => {
+            if (response.error) {
+                alert(response.error)
+            } else {
+                dispatch(setAllGames(response.data))
+            }
+        })
+        .catch(console.log)
     }
 }
