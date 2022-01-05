@@ -16,7 +16,7 @@ export const clearCurrentUser = () => {
     }
 }
 
-export const login = creds => {
+export const login = (creds, history) => {
     return dispatch => {
         return fetch("http://localhost:3001/api/login", {
             credentials: "include", 
@@ -34,6 +34,7 @@ export const login = creds => {
                 dispatch(setCurrentUser(response.data))
                 dispatch(resetLoginForm())
                 dispatch(getGameShelf())
+                history.push('/')
             }
         })
         .catch(console.log)
