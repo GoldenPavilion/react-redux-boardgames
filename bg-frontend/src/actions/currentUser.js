@@ -41,7 +41,7 @@ export const login = (creds, navigate) => {
     }
 }
 
-export const submitSignUp = formData => {
+export const submitSignUp = (formData, navigate) => {
     return dispatch => {
         const userData = {
             user: formData
@@ -62,6 +62,7 @@ export const submitSignUp = formData => {
                 dispatch(setCurrentUser(response.data))
                 dispatch(resetSignUpForm())
                 dispatch(getGameShelf())
+                navigate('/')
             }
         })
     }
