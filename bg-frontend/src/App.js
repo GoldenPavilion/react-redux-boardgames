@@ -26,7 +26,7 @@ class App extends Component {
               <Route exact path="/" element={<MainContainer />} />
               {!loggedIn ? <Route exact path='/login' element={<Login />} /> : ""}
               {!loggedIn ? <Route exact path='/signup' element={<SignUp />} /> : ""}
-              <Route exact path='/games' element={<AllGames />} />
+              {loggedIn ? <Route exact path='/games' element={<AllGames />} /> : ""}
             </Routes>
       </div>
       </Router>
