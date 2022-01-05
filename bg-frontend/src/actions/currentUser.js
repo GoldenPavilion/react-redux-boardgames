@@ -2,7 +2,6 @@ import { resetLoginForm } from './loginForm';
 import { resetSignUpForm } from './signUpForm';
 import { getGameShelf } from './gameShelf';
 import { resetGameShelf } from './gameShelf';
-import { Navigate, useNavigate } from 'react-router-dom';
 
 export const setCurrentUser = user => {
     return {
