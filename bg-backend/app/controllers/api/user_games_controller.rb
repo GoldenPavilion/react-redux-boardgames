@@ -9,6 +9,16 @@ class Api::UserGamesController < ApplicationController
         render json: @user_game
     end
 
+    def create
+        @user_game = UserGame.new(user_game_params)
+
+        if @user_game.save
+            render json: UserGame.new(@user_game)
+        else
+            render json: @user_game.errors, status: :unprocessable_entity
+        end
+    end
+
     private 
 
     def user_game_params
