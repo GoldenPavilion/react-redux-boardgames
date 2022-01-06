@@ -1,12 +1,12 @@
 class Api::UserGamesController < ApplicationController
     def index
         @user_games = UserGame.all
-        render json: @user_games
+        render json: UserGameSerializer.new(@user_games)
     end
 
     def show
         @user_game = UserGame.find(params[:id])
-        render json: @user_game
+        render json: UserGameSerializer.new(@user_game)
     end
 
     def create
