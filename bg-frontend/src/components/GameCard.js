@@ -1,11 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { addGameToShelf } from '../actions/gameShelf';
 
 const GameCard = props => {
     const game = props.game.attributes
     
     const handleClick = event => {
-        debugger
         event.preventDefault();
         addGameToShelf(game.id, currentUser.id)
     }
@@ -21,6 +21,12 @@ const GameCard = props => {
             <button onClick={handleClick}>Add To Shelf</button>
         </div>
     )
+}
+
+const mapStateToProps = state => {
+    return {
+        currentUser: state.currentUserReducer
+    }
 }
 
 export default GameCard;
