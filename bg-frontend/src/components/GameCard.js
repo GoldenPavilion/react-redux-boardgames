@@ -7,7 +7,7 @@ const GameCard = props => {
     
     const handleClick = event => {
         event.preventDefault();
-        addGameToShelf(game.id, currentUser.id)
+        addGameToShelf(game.id, props.currentUser.id)
     }
 
 
@@ -29,4 +29,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default GameCard;
+export default connect(mapStateToProps)(GameCard);
