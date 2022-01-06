@@ -1,9 +1,11 @@
 import React from 'react';
+import { addGameToShelf } from '../actions/gameShelf';
 
 const GameCard = props => {
     const game = props.game.attributes
     
     const handleClick = event => {
+        debugger
         event.preventDefault();
         addGameToShelf(game.id, currentUser.id)
     }
