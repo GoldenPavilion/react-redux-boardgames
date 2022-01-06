@@ -31,3 +31,9 @@ export const getGameShelf = () => {
             .catch(console.log)
     }
 }
+
+// export const addGameToShelf = () => {
+   // return {
+     //   type: "ADD_GAME_TO_SHELF"
+   //}
+//}
