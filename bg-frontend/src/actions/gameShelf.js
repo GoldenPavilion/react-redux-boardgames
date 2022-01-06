@@ -32,8 +32,8 @@ export const getGameShelf = () => {
     }
 }
 
-// export const addGameToShelf = () => {
-   // return {
-     //   type: "ADD_GAME_TO_SHELF"
-   //}
-//}
+export const addGameToShelf = () => {
+    return {
+        type: "ADD_GAME_TO_SHELF"
+   }
+}
