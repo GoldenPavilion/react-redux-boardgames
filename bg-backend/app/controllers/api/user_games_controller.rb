@@ -13,8 +13,7 @@ class Api::UserGamesController < ApplicationController
         @user_game = UserGame.new(user_game_params)
         
         if @user_game.save
-            byebug
-            render json: UserGame.new(@user_game)
+            render json: @user_game
         else
             render json: @user_game.errors, status: :unprocessable_entit1111y
         end
