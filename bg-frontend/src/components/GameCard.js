@@ -7,7 +7,7 @@ const GameCard = props => {
     
     const handleClick = event => {
         event.preventDefault();
-        addGameToShelf(game.id, props.currentUser.id)
+        addGameToShelf(props.game.id, props.currentUser.id)
     }
 
 

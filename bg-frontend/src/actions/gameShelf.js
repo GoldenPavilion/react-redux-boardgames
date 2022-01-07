@@ -32,8 +32,16 @@ export const getGameShelf = () => {
     }
 }
 
-export const addGameToShelf = () => {
-    return {
-        type: "ADD_GAME_TO_SHELF"
-   }
+export const addGameToShelf = (ids) => {
+    return fetch("http://http://localhost:3001/api/user_games", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(ids)
+    })
+    .then(resp => resp.json())
+    .then(response => {
+        console.log(response)
+    })
 }
