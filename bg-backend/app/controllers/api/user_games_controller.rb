@@ -10,7 +10,7 @@ class Api::UserGamesController < ApplicationController
     end
 
     def create
-        @user_game = UserGame.new(user_game_params)
+        @user_game = UserGame.new(user_games_params)
 
         if @user_game.save
             render json: UserGame.new(@user_game)
@@ -21,7 +21,7 @@ class Api::UserGamesController < ApplicationController
 
     private 
 
-    def user_game_params
-        params.require(:user_game).permit(:user_id, :game_id)
+    def user_games_params
+        params.require(:user_games).permit(:user_id, :game_id)
     end
 end
