@@ -49,5 +49,8 @@ export const addGameToShelf = (ids) => {
         body: JSON.stringify(ids)
     })
     .then(resp => resp.json())
-    .then(response => console.log(response))
+    .then(response => {
+        debugger
+        console.log(response)
+    })
 }

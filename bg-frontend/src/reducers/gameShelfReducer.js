@@ -4,6 +4,8 @@ const gameShelfReducer = (state = [], action) => {
             return action.games
         case "RESET_GAME_SHELF":
             return null
+        case "UPDATE_GAME_SHELF":
+            return action.game
         default:
             return state
     }
