@@ -33,7 +33,7 @@ export const getGameShelf = () => {
 }
 
 export const addGameToShelf = (ids) => {
-    return fetch("http://http://localhost:3001/api/user_games", {
+    return fetch("http://localhost:3001/api/user_games", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
