@@ -34,6 +34,7 @@ export const getGameShelf = () => {
 
 export const addGameToShelf = (ids) => {
     return fetch("http://localhost:3001/api/user_games", {
+        credentials: "include",
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -41,7 +42,5 @@ export const addGameToShelf = (ids) => {
         body: JSON.stringify(ids)
     })
     .then(resp => resp.json())
-    .then(response => {
-        console.log(response)
-    })
+    .then(response => console.log(response))
 }

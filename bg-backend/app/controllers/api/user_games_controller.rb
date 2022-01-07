@@ -6,22 +6,23 @@ class Api::UserGamesController < ApplicationController
 
     def show
         @user_game = UserGame.find(params[:id])
-        render json: UserGameSerializer.new(@user_game)
+        render json: UserGameSerializer.new(@user_games)
     end
 
     def create
-        @user_game = UserGame.new(user_games_params)
-
+        @user_game = UserGame.new(user_game_params)
+        
         if @user_game.save
+            byebug
             render json: UserGame.new(@user_game)
         else
-            render json: @user_game.errors, status: :unprocessable_entity
+            render json: @user_game.errors, status: :unprocessable_entit1111y
         end
     end
 
     private 
 
-    def user_games_params
-        params.require(:user_games).permit(:user_id, :game_id)
+    def user_game_params
+        params.require(:user_game).permit(:user_id, :game_id)
     end
 end
