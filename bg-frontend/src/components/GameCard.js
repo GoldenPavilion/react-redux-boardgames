@@ -5,11 +5,12 @@ import { addGameToShelf } from '../actions/gameShelf';
 const GameCard = props => {
     const game = props.game.attributes
     
+    const ids = { game_id: parseInt(props.game.id), user_id: parseInt(props.currentUser.id) }
+    
     const handleClick = event => {
         event.preventDefault();
-        addGameToShelf(props.game.id, props.currentUser.id)
+        addGameToShelf(ids)
     }
-
 
     return (
         <div className="game-card">
