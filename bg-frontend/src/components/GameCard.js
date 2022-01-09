@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { addGameToShelf } from '../actions/gameShelf';
 
 const GameCard = props => {
-    const game = props.game.attributes
-    
+    const game = props.game.attributes 
     const ids = { game_id: parseInt(props.game.id), user_id: parseInt(props.currentUser.id) }
     
     const handleClick = event => {

@@ -11,11 +11,10 @@ class Api::UserGamesController < ApplicationController
 
     def create
         @user_game = UserGame.new(user_game_params)
-        
         if @user_game.save
             render json: @user_game
         else
-            render json: @user_game.errors, status: :unprocessable_entit1111y
+            render json: @user_game.errors, status: :unprocessable_entity
         end
     end
 

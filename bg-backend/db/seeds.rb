@@ -99,6 +99,105 @@ Game.create(
     img: "https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1559254992240-511JJsfrrNL.jpg?format=webp"
 )
 
+Game.create(
+    name: "Azul", 
+    year_published: 2017,
+    min_players: 2, 
+    max_players: 4,
+    min_playtime: 30,
+    max_playtime: 60,
+    description_preview: "Azul was designed by the world famous, award-winning game author Michael Riesling. Azul captures the beautiful aesthetics of Moorish art in a contemporary board game.",
+    img: "https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1559254200327-61EFZADvURL.jpg?format=webp"
+)
+
+Game.create(
+    name: "Viticulture", 
+    year_published: 2015,
+    min_players: 1, 
+    max_players: 6,
+    min_playtime: 90,
+    max_playtime: 120,
+    description_preview: "Viticulture is a worker-placement game set in the foothills of Tuscany. The Essential Edition includes the second edition of Viticulture along with several elements from the original Tuscany expansion pack, hand-picked by famed designer Uwe Rosenberg.",
+    img: "https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1629323034692.jpg?format=webp"
+)
+
+Game.create(
+    name: "Spirit Island", 
+    year_published: 2016,
+    min_players: 1, 
+    max_players: 4,
+    min_playtime: 90,
+    max_playtime: 120,
+    description_preview: "Powerful Spirits have existed on this isolated island for time immemorial. They are both part of the natural world and - at the same time - something beyond nature. Native Islanders, known as the Dahan, have learned how to co-exist with the spirits, but with a healthy dose of fear and reverence. However, now, the island has been "discovered" by invaders from a far-off land. These would-be colonists are taking over the land and upsetting the natural balance, destroying the presence of Spirits as they go. As Spirits, you must grow in power and work together to drive the invaders from your island... before it's too late!",
+    img: "https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1559254941010-61PJxjjnbfL.jpg?format=webp"
+)
+
+Game.create(
+    name: "7 Wonders", 
+    year_published: 2010,
+    min_players: 2, 
+    max_players: 7,
+    min_playtime: 30,
+    max_playtime: 45,
+    description_preview: "You are the leader of one of the 7 great cities of the Ancient World. Gather resources, develop commercial routes and affirm your military supremacy. Build your city and erect an architectural wonder which will transcend future times!",
+    img: "https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1559253945470-61dlm9QcXpL.jpg?format=webp"
+)
+
+Game.create(
+    name: "The Castles of Burgundy", 
+    year_published: 2011,
+    min_players: 2, 
+    max_players: 4,
+    min_playtime: 30,
+    max_playtime: 90,
+    description_preview: "15th century princes from the Loire Valley devote their efforts to strategic trading and building in order to bring their estates to prosperity and prominence. Over the course of 5 rounds, collect the most points by trading, live stock farming, city building and scientific research to win!",
+    img: "https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1559254202422-51mP2aJfyxL.jpg?format=webp"
+)
+
+Game.create(
+    name: "Carcassonne", 
+    year_published: 2000,
+    min_players: 2, 
+    max_players: 5,
+    min_playtime: 30,
+    max_playtime: 45,
+    description_preview: "Each game of Carcassonne reveals a unique environment as tiles form a landscape of cities, roads, fields, and monasteries. Claim these features with your followers to win the game.",
+    img: "https://cdn.shopify.com/s/files/1/0513/4077/1515/products/carcassonne-board-game.jpg?v=1609629064"
+)
+
+Game.create(
+    name: "Splendor", 
+    year_published: 2014,
+    min_players: 2, 
+    max_players: 4,
+    min_playtime: 30,
+    max_playtime: 60,
+    description_preview: "Splendor is a fast-paced and addictive game of chip-collecting and card development. Players are merchants of the Renaissance trying to buy gem mines, means of transportation, shops; all in order to acquire the most prestige points. If you're wealthy enough, you might even receive a visit from a noble at some point, which of course will further increase your prestige.",
+    img: "https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1559254164722-51AHDwGznvL.jpg?format=webp"
+)
+
+Game.create(
+    name: "Pandemic Legacy: Season 1", 
+    year_published: 2015,
+    min_players: 2, 
+    max_players: 4,
+    min_playtime: 60,
+    max_playtime: 75,
+    description_preview: "Pandemic Legacy is a co-operative campaign game, with an overarching story-arc played through 12-24 sessions, depending on how well your group does at the game. At the beginning, the game starts very similar to basic Pandemic, in which your team of disease-fighting specialists races against the clock to travel around the world, treating disease hotspots while researching cures for each of four plagues before they get out of hand.",
+    img: "https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1559257833516-612BUfjuA7fL.jpg?format=webp"
+)
+
+Game.create(
+    name: "Race for the Galaxy", 
+    year_published: 2007,
+    min_players: 2, 
+    max_players: 4,
+    min_playtime: 30,
+    max_playtime: 60,
+    description_preview: "In Race for the Galaxy from Rio Grande Games, players build galactic civilizations using game cards that represent worlds or technical and social developments.",
+    img: "https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1629322825257.png?format=webp"
+)
+
 Comment.create(content: "What a great game!", user_id: 1, game_id: 1)
 Comment.create(content: "This was okay, but has a little too much going on.", user_id: 1, game_id: 2)
 Comment.create(content: "Endlessly replayable - as long as you have the same group. Glorious storytelling!", user_id: 1, game_id: 3)
