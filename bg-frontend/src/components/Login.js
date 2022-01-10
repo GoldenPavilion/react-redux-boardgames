@@ -22,26 +22,35 @@ const Login = ({ loginReducer, updateLoginForm, login }) => {
     
     return(
         <div className="login">
+            <br />
             <form className="login-form" onSubmit={handleSubmit}>
-                <label>Username:</label>
-                <input
-                    className="username" 
-                    type="text"
-                    name="username"
-                    value={loginReducer.username}
-                    onChange={handleOnChange} 
-                />
+                <div class="form-group">
+                    <label>Username: </label>
+                    <input
+                        className="form-control" 
+                        type="text"
+                        name="username"
+                        value={loginReducer.username}
+                        onChange={handleOnChange} 
+                    />
+                </div>
                 <br />
-                <label>Password:</label>
-                <input 
-                    className="password"
-                    type="password"
-                    name="password"
-                    value={loginReducer.password}
-                    onChange={handleOnChange}
-                />
+                <div class="form-group">
+                <label>Password: </label>
+                    <input 
+                        className="form-control"
+                        type="password"
+                        name="password"
+                        value={loginReducer.password}
+                        onChange={handleOnChange}
+                    />
+                </div>
                 <br />
-                <button type="submit" value="Login">Login</button>
+                <button 
+                    type="submit"
+                    class="btn btn-secondary" 
+                    value="Login"
+                >Login</button>
             </form>
         </div>
     )

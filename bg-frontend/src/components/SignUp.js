@@ -32,52 +32,68 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
 
     return(
         <div className="sign-up">
+            <br />
             <form className="signup-form" onSubmit={handleSubmit}>
-                <label>Username:</label>
-                <input 
-                    className="username"
-                    type="text"
-                    name="username"
-                    value={newUserReducer.username}
-                    onChange={handleOnChange}
-                />
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input 
+                        className="form-control"
+                        type="text"
+                        name="username"
+                        value={newUserReducer.username}
+                        onChange={handleOnChange}
+                    />
+                </div>
                 <br />
-                <label>Password:</label>
-                <input 
-                    className="password"
-                    type="password"
-                    name="password"
-                    value={newUserReducer.password}
-                    onChange={handleOnChange}
-                />
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input 
+                        className="form-control"
+                        type="password"
+                        name="password"
+                        value={newUserReducer.password}
+                        onChange={handleOnChange}
+                    />
+                </div>
                 <br />
-                <label>Email:</label>
-                <input 
-                    className="email"
-                    type="text"
-                    name="email"
-                    value={newUserReducer.email}
-                    onChange={handleOnChange}
-                />
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input 
+                        className="form-control"
+                        type="text"
+                        name="email"
+                        value={newUserReducer.email}
+                        onChange={handleOnChange}
+                    />
+                </div>
                 <br />
-                <label>Location:</label>
-                <input 
-                    className="location"
-                    type="text"
-                    name="location"
-                    value={newUserReducer.location}
-                    onChange={handleOnChange}
-                />
+                <div class="form-group">
+                    <label>Location:</label>
+                    <input 
+                        className="form-control"
+                        type="text"
+                        name="location"
+                        value={newUserReducer.location}
+                        onChange={handleOnChange}
+                    />
+                </div>
                 <br />
-                <label>Would You Like To Host?:</label>
-                <input 
-                    className="game_host" 
-                    type="checkbox" 
-                    name="game_host" 
-                    onChange={handleCheck}
-                />
+                <div class="form-check">
+                    <label>Would You Like To Host? </label>
+                    <br/>
+                    <input 
+                        className="from-check-input" 
+                        type="checkbox" 
+                        name="game_host" 
+                        onChange={handleCheck}
+                    /> Yes, please. 
+                </div>
                 <br />
-                <button type="submit" value="Sign Up">Sign Up</button>
+                <button 
+                    type="submit" 
+                    value="Sign Up"
+                    class="btn btn-secondary"
+                >Sign Up</button>
             </form>
         </div>
     )
