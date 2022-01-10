@@ -33,7 +33,7 @@ export const getGameShelf = () => {
 }
 
 export const addGameToShelf = (ids) => {
-    //return dispatch => {
+    return dispatch => {
         return fetch("http://localhost:3001/api/user_games", {
             credentials: "include",
             method: "POST",
@@ -45,8 +45,8 @@ export const addGameToShelf = (ids) => {
         .then(resp => resp.json())
         .then (response => {
             console.log(response)
-            //dispatch(resetGameShelf())
-            //dispatch(getGameShelf())
+            dispatch(resetGameShelf())
+            dispatch(getGameShelf())
         })
-    //}
+    }
 }
