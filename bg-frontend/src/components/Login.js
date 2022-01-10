@@ -24,7 +24,7 @@ const Login = ({ loginReducer, updateLoginForm, login }) => {
         <div className="login">
             <br />
             <form className="login-form" onSubmit={handleSubmit}>
-                <div class="form-group">
+                <div className="form-group">
                     <label>Username: </label>
                     <input
                         className="form-control" 
@@ -35,7 +35,7 @@ const Login = ({ loginReducer, updateLoginForm, login }) => {
                     />
                 </div>
                 <br />
-                <div class="form-group">
+                <div className="form-group">
                 <label>Password: </label>
                     <input 
                         className="form-control"
@@ -48,14 +48,13 @@ const Login = ({ loginReducer, updateLoginForm, login }) => {
                 <br />
                 <button 
                     type="submit"
-                    class="btn btn-secondary" 
+                    className="btn btn-secondary" 
                     value="Login"
                 >Login</button>
             </form>
         </div>
     )
 }
-
 
 const mapStateToProps = state => {
     return {

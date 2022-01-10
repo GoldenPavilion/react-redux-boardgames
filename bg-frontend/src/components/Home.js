@@ -2,10 +2,10 @@ import React from 'react';
 
 const Home = () => {
     return(
-        <div class ="jumbotron">
+        <div className="jumbotron">
             <br/>
-            <h1 class="display-4">Welcome to BoardGameShelf!</h1>
-            <p class="lead">Login or Signup to start your collection.</p>
+            <h1 className="display-4">Welcome to BoardGameShelf!</h1>
+            <p className="lead">Login or Signup to start your collection.</p>
         </div>
     )
 }

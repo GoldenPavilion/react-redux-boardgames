@@ -34,7 +34,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
         <div className="sign-up">
             <br />
             <form className="signup-form" onSubmit={handleSubmit}>
-                <div class="form-group">
+                <div className="form-group">
                     <label>Username:</label>
                     <input 
                         className="form-control"
@@ -45,7 +45,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
                     />
                 </div>
                 <br />
-                <div class="form-group">
+                <div className="form-group">
                     <label>Password:</label>
                     <input 
                         className="form-control"
@@ -56,7 +56,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
                     />
                 </div>
                 <br />
-                <div class="form-group">
+                <div className="form-group">
                     <label>Email:</label>
                     <input 
                         className="form-control"
@@ -67,7 +67,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
                     />
                 </div>
                 <br />
-                <div class="form-group">
+                <div className="form-group">
                     <label>Location:</label>
                     <input 
                         className="form-control"
@@ -78,7 +78,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
                     />
                 </div>
                 <br />
-                <div class="form-check">
+                <div className="form-check">
                     <label>Would You Like To Host? </label>
                     <br/>
                     <input 
@@ -92,7 +92,7 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
                 <button 
                     type="submit" 
                     value="Sign Up"
-                    class="btn btn-secondary"
+                    className="btn btn-secondary"
                 >Sign Up</button>
             </form>
         </div>

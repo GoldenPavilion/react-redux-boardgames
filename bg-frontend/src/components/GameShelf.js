@@ -4,7 +4,8 @@ import GameCard from './GameCard';
 
 const GameShelf = props => {
     const myGames = props.games ? 
-        props.games.map(game => <GameCard key={game.id} game={game} />) : <div />
+        props.games.map(game => 
+            <GameCard key={game.id} game={game} />) : <div />
     
     return myGames
 }

@@ -7,10 +7,10 @@ const UserProfile = props => {
     
     return(
         <div className="card" style={{width: 300}}>
-            <div class="card-body">
-                { user.game_host ? <h3 class="card-title">{ user.username }(Host)</h3> : <h3>{ user.username }</h3>}        
-                <p class="card-text">Location: { user.location} </p>
-                <p class="card-text">Contact: { user.email }</p>
+            <div className="card-body">
+                { user.game_host ? <h3 className="card-title">{ user.username }(Host)</h3> : <h3>{ user.username }</h3>}        
+                <p className="card-text">Location: { user.location} </p>
+                <p className="card-text">Contact: { user.email }</p>
                 <Logout />
             </div>
         </div>

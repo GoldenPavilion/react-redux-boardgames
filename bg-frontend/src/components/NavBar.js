@@ -5,17 +5,17 @@ import { Link } from 'react-router-dom';
 const NavBar = ({ currentUser }) => {
     return(
         <div className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <ul class="navbar-nav">
-                <li class ="nav-item active">
+            <ul className="navbar-nav">
+                <li className="nav-item active">
                     <Link to="/" className="nav-link">Home </Link>
                 </li>
-                <li class ="nav-item">
+                <li className="nav-item">
                     { !currentUser ?<Link to="/login" className="nav-link">Login </Link> : ""}
                 </li>
-                <li class ="nav-item">
+                <li className="nav-item">
                     { !currentUser ? <Link to="/signup" className="nav-link">Sign Up</Link> : ""}
                 </li>
-                <li class ="nav-item">
+                <li className="nav-item">
                     { currentUser ? <Link to="/games" className="nav-link">Games</Link> : ""} 
                 </li>
             </ul>
