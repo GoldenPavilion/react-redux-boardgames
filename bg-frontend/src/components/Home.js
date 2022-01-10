@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Home = () => {
     return(
-        <div>
-            <h3>Welcome to BoardGameShelf!</h3>
-            <p>Login or Signup to start your collection.</p>
-            <Link to="/signup">Sign Up</Link> <Link to="/login">Login</Link>
+        <div class ="jumbotron">
+            <br/>
+            <h1 class="display-4">Welcome to BoardGameShelf!</h1>
+            <p class="lead">Login or Signup to start your collection.</p>
         </div>
     )
 }
