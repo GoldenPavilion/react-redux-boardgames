@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 const NavBar = ({ currentUser }) => {
     return(
-        <div className="nav-bar">
-            <Link to="/">Home </Link>
-            { !currentUser ? <Link to="/login">Login </Link> : ""}
-            { !currentUser ? <Link to="/signup">Sign Up</Link> : ""}
-            { currentUser ? <Link to="/games">Games</Link> : ""} 
+        <div className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <Link to="/" className="nav-link" >Home </Link>
+            { !currentUser ?<Link to="/login" className="nav-link">Login </Link> : ""}
+            { !currentUser ? <Link to="/signup" className="nav-link">Sign Up</Link> : ""}
+            { currentUser ? <Link to="/games" className="nav-link">Games</Link> : ""} 
         </div>
     )
 }
