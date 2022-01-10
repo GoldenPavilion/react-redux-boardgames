@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import 'bootstrap\dist\css\bootstrap.css';
 
 import usersReducer from './reducers/usersReducer';
 import currentUserReducer from './reducers/currentUserReducer';
