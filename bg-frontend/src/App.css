@@ -40,3 +40,10 @@
 .nav-bar {
   background-color: rgb(184, 142, 142);
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; 
+  justify-content: space-between;
+}

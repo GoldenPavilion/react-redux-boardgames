@@ -8,7 +8,9 @@ const ProfileContainer = props => {
     return(
         <div className="profile-container">
             <UserProfile key={user.id} user={user} />
-            <GameShelf />
+            <div className="row">
+                <GameShelf />
+            </div>
         </div>
     )
 }
