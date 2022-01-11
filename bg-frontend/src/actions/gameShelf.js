@@ -33,6 +33,7 @@ export const getGameShelf = () => {
 }
 
 export const addGameToShelf = (ids) => {
+    debugger
     return dispatch => {
         return fetch("http://localhost:3001/api/user_games", {
             credentials: "include",

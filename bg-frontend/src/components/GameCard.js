@@ -3,16 +3,17 @@ import { connect } from 'react-redux';
 import { addGameToShelf } from '../actions/gameShelf';
 
 const GameCard = props => {
+    debugger
     const game = props.game.attributes 
     const ids = { game_id: parseInt(props.game.id), user_id: parseInt(props.currentUser.id) }
     
     const handleClick = event => {
         event.preventDefault();
-        addGameToShelf(ids)
+        props.addGameToShelf(ids)
     }
 
     return (
-        <div className="card" style={{width: 400}}>
+        <div className="card" style={{width: 320}}>
             <img className="card-img-top" src={ game.img } alt="Game Title"></img>
             <div className="card-body">
                 <h3 className="card-title">{ game.name } ({ game.year_published})</h3>
@@ -31,4 +32,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(GameCard);
+export default connect(mapStateToProps, { addGameToShelf })(GameCard);
