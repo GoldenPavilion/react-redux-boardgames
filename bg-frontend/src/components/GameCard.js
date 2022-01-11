@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addGameToShelf } from '../actions/gameShelf';
 
-//const GameCard = props => {
 class GameCard extends Component {    
+    state = {
+        buttonText: "Add To Shelf",
+        disabled: "false"
+    }
 
     render(){
         const game = this.props.game.attributes 
