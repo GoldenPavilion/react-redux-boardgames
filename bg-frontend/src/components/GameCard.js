@@ -5,7 +5,7 @@ import { addGameToShelf } from '../actions/gameShelf';
 class GameCard extends Component {    
     state = {
         buttonText: "Add To Shelf",
-        disabled: "false"
+        disabled: false
     }
 
     render(){
@@ -14,11 +14,11 @@ class GameCard extends Component {
         
         const handleClick = event => {
             event.preventDefault();
-            this.props.addGameToShelf(ids)
             this.setState({
                 buttonText: "SHELVED!",
-                disabled: "true"
+                disabled: true
             })
+            this.props.addGameToShelf(ids)
         }
 
         return (
@@ -29,7 +29,7 @@ class GameCard extends Component {
                     <p className="card-text">Players: { game.min_players } - { game.max_players }</p>
                     <p className="card-text">Play Time: { game.min_playtime } - { game.max_playtime }</p>
                     <p className="card-text">Description: { game.description_preview }</p>
-                    <button className="btn btn-secondary" onClick={handleClick}>Add To Shelf</button>
+                    <button className="btn btn-secondary" onClick={handleClick} disabled={this.state.disabled}>{this.state.buttonText}</button>
                 </div>
             </div>
     )}
