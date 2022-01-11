@@ -18,9 +18,19 @@ class AddGameButton extends Component {
         }
     
         if(userGames.some(game => game.name === currentGame.name)){
-            return(<button className="btn btn-secondary" disabled="true">Shelved!</button>)
+            return(
+                <button 
+                    className="btn btn-secondary" 
+                    disabled="true">
+                Shelved!</button>
+            )
         } else {
-            return(<button className="btn btn-secondary" onClick={this.props.handleClick}>Add To Shelf</button>)
+            return(
+                <button 
+                    className="btn btn-secondary" 
+                    onClick={this.props.handleClick}>
+                {this.state.buttonText}</button>
+            )
         }
     }
 }
