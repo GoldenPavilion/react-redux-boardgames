@@ -1,26 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addGameToShelf } from '../actions/gameShelf';
 import AddGameButton from './AddGameButton'
 
 class GameCard extends Component {    
-    state = {
-        buttonText: "Add To Shelf",
-        disabled: false
-    }
 
     render(){
         const game = this.props.game.attributes 
         const ids = { game_id: parseInt(this.props.game.id), user_id: parseInt(this.props.currentUser.id) }
-        
-        //const handleClick = event => {
-        //    event.preventDefault();
-        //    this.setState({
-        //        buttonText: "SHELVED!",
-        //        disabled: true
-        //    })
-        //    this.props.addGameToShelf(ids)
-        //}
 
         return (
             <div className="card" style={{width: 320}}>
@@ -43,4 +29,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { addGameToShelf })(GameCard);
+export default connect(mapStateToProps)(GameCard);
