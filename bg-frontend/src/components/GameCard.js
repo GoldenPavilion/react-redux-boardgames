@@ -13,14 +13,14 @@ class GameCard extends Component {
         const game = this.props.game.attributes 
         const ids = { game_id: parseInt(this.props.game.id), user_id: parseInt(this.props.currentUser.id) }
         
-        const handleClick = event => {
-            event.preventDefault();
-            this.setState({
-                buttonText: "SHELVED!",
-                disabled: true
-            })
-            this.props.addGameToShelf(ids)
-        }
+        //const handleClick = event => {
+        //    event.preventDefault();
+        //    this.setState({
+        //        buttonText: "SHELVED!",
+        //        disabled: true
+        //    })
+        //    this.props.addGameToShelf(ids)
+        //}
 
         return (
             <div className="card" style={{width: 320}}>
@@ -30,7 +30,7 @@ class GameCard extends Component {
                     <p className="card-text">Players: { game.min_players } - { game.max_players }</p>
                     <p className="card-text">Play Time: { game.min_playtime } - { game.max_playtime }</p>
                     <p className="card-text">Description: { game.description_preview }</p>
-                    <AddGameButton handleClick={handleClick} currentUser={this.props.currentUser} game={game} />
+                    <AddGameButton currentUser={this.props.currentUser} game={game} ids={ids} />
                 </div>
             </div>
     )}
