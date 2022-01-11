@@ -7,7 +7,6 @@ const SearchForm = props => {
                 <div class="form-group">
                     <input type="text" className="form-control" placeholder="Search..." />
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
             </form>
         </div>
     )
