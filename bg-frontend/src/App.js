@@ -4,7 +4,7 @@ import NavBar from './components/NavBar.js';
 import MainContainer from './components/MainContainer.js';
 import Login from './components/Login.js';
 import SignUp from './components/SignUp.js';
-import AllGames from './components/AllGames.js'
+import AllGamesContainer from './components/AllGamesContainer.js'
 import { connect } from 'react-redux';
 import { getCurrentUser } from "./actions/currentUser";
 import { getAllGames } from "./actions/allGames";
@@ -26,7 +26,7 @@ class App extends Component {
               <Route exact path="/" element={<MainContainer />} />
               {!loggedIn ? <Route exact path='/login' element={<Login />} /> : ""}
               {!loggedIn ? <Route exact path='/signup' element={<SignUp />} /> : ""}
-              {loggedIn ? <Route exact path='/games' element={<div className="row"><AllGames /></div>} /> : ""}
+              {loggedIn ? <Route exact path='/games' element={<div className="row"><AllGamesContainer /></div>} /> : ""}
             </Routes>
       </div>
       </Router>
