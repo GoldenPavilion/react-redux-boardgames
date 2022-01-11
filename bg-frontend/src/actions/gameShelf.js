@@ -45,7 +45,6 @@ export const addGameToShelf = (ids) => {
         })
         .then(resp => resp.json())
         .then (response => {
-            console.log(response)
             dispatch(resetGameShelf())
             dispatch(getGameShelf())
         })
