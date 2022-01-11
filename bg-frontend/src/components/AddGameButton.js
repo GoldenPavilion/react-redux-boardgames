@@ -9,6 +9,13 @@ class AddGameButton extends Component {
     render(){
         const userGames = this.props.currentUser.attributes.games
         const currentGame = this.props.game
+
+        const buttonChange = () => {
+            this.setState({
+                buttonText: "SHELVED!",
+                disabled: true
+            })
+        }
     
         if(userGames.some(game => game.name === currentGame.name)){
             return(<button className="btn btn-secondary" disabled="true">Shelved!</button>)
