@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addGameToShelf } from '../actions/gameShelf';
+import AddGameButton from './AddGameButton'
 
 class GameCard extends Component {    
     state = {
@@ -30,6 +31,7 @@ class GameCard extends Component {
                     <p className="card-text">Play Time: { game.min_playtime } - { game.max_playtime }</p>
                     <p className="card-text">Description: { game.description_preview }</p>
                     <button className="btn btn-secondary" onClick={handleClick} disabled={this.state.disabled}>{this.state.buttonText}</button>
+                    <AddGameButton handleClick={handleClick} currentUser={this.props.currentUser} game={game} />
                 </div>
             </div>
     )}
