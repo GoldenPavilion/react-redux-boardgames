@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import GameCard from './GameCard';
 
 const AllGames = props => {
+
     const allGames = props.allGames ? 
         props.allGames.map(game => <GameCard key={game.id} game={game} />) : <div />
     
