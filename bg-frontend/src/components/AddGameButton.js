@@ -33,7 +33,8 @@ class AddGameButton extends Component {
             return(
                 <button 
                     className="btn btn-secondary" 
-                    onClick={handleClick}>
+                    onClick={handleClick}
+                    disabled={this.state.disabled}>
                 {this.state.buttonText}</button>
             )
         }
