@@ -15,6 +15,10 @@ class GameCard extends Component {
         const handleClick = event => {
             event.preventDefault();
             this.props.addGameToShelf(ids)
+            this.setState({
+                buttonText: "SHELVED!",
+                disabled: "true"
+            })
         }
 
         return (
