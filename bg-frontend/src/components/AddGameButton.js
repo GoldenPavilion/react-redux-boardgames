@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addGameToShelf } from '../actions/gameShelf';
 
 class AddGameButton extends Component {
     state = {
@@ -38,4 +40,4 @@ class AddGameButton extends Component {
     }
 }
 
-export default AddGameButton; 
+export default connect(null, { addGameToShelf })(AddGameButton); 
