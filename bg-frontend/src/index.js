@@ -14,6 +14,7 @@ import loginReducer from './reducers/loginReducer';
 import newUserReducer from './reducers/newUserReducer';
 import gameShelfReducer from './reducers/gameShelfReducer';
 import allGamesReducer from './reducers/allGamesReducer';
+import searchReducer from './reducers/searchReducer';
 
 const reducers = combineReducers({
   users: usersReducer,
@@ -21,7 +22,8 @@ const reducers = combineReducers({
   loginReducer,
   newUserReducer,
   gameShelfReducer,
-  allGamesReducer
+  allGamesReducer,
+  searchReducer
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
