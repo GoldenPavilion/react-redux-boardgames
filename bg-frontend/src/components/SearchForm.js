@@ -1,22 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/searchForm';
+import newUserReducer from '../reducers/newUserReducer';
 
 const SearchForm = ({ searchReducer, updateSearchForm }) => {
     const handleOnChange = event => {
-        const { name, value } = event.target
+        const value = event.target.value
         const updatedData = {
-            ...searchReducer,
-            [name]: value
+            ...newUserReducer, 
+            value
         }
-        console.log(updatedData)
         updateSearchForm(updatedData)
     }
 
     return (
         <div className="search">
             <form>
-                <div class="form-group">
+                <div className="form-group">
                     <input 
                         type="text" 
                         className="form-control" 
