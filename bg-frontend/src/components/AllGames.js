@@ -3,16 +3,27 @@ import { connect } from 'react-redux';
 import GameCard from './GameCard';
 
 const AllGames = props => {
-
-    const allGames = props.allGames ? 
+    const searchInput = props.searchInput.value
+    
+    const allGames = props.allGames.length > 0 ? 
         props.allGames.map(game => <GameCard key={game.id} game={game} />) : <div />
     
-    return allGames
+    const searchResults = props.allGames.filter((game) => game.attributes.name.toLowerCase() === searchInput.toLowerCase())
+    
+    const displayResults = searchResults.length > 0 ?
+        searchResults.map(game => <GameCard key={game.id} game={game} />) : <div />
+
+    if (searchInput === ""){
+        return allGames
+    } else {
+        return displayResults
+    }
 }
 
 const mapStateToProps = state => {
     return {
-        allGames: state.allGamesReducer
+        allGames: state.allGamesReducer,
+        searchInput: state.searchReducer
     }
 }
 

@@ -5,6 +5,7 @@ import newUserReducer from '../reducers/newUserReducer';
 
 const SearchForm = ({ searchReducer, updateSearchForm }) => {
     const handleOnChange = event => {
+        event.preventDefault()
         const value = event.target.value
         const updatedData = {
             ...newUserReducer, 
