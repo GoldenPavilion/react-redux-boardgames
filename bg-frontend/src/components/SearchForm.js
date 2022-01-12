@@ -1,8 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/allGames';
-import searchReducer from '../reducers/searchReducer';
 
-const SearchForm = props => {
+const SearchForm = ({ updateSearchForm }) => {
 
     const handleOnChange = event => {
         const { name, value } = event.target
@@ -20,7 +20,9 @@ const SearchForm = props => {
                     <input 
                         type="text" 
                         className="form-control" 
+                        onChange={handleOnChange}
                         placeholder="Search..." 
+                        value={searchReducer.searchInput}
                     />
                 </div>
             </form>
@@ -28,4 +30,4 @@ const SearchForm = props => {
     )
 }
 
-export default SearchForm;
+export default connect(null, { updateSearchForm })(SearchForm);
