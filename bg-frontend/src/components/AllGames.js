@@ -5,16 +5,16 @@ import GameCard from './GameCard';
 const AllGames = props => {
     const searchInput = props.searchInput.value
     
-    const allGames = props.allGames.length > 0 ? 
+    const allGamesResults = props.allGames.length > 0 ? 
         props.allGames.map(game => <GameCard key={game.id} game={game} />) : <div />
     
-    const searchResults = props.allGames.filter((game) => game.attributes.name.toLowerCase() === searchInput.toLowerCase())
+    const searchResults = props.allGames.filter((game) => game.attributes.name === searchInput)
     
     const displayResults = searchResults.length > 0 ?
         searchResults.map(game => <GameCard key={game.id} game={game} />) : <div />
 
     if (searchInput === ""){
-        return allGames
+        return allGamesResults
     } else {
         return displayResults
     }
