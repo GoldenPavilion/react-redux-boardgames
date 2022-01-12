@@ -1,15 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateSearchForm } from '../actions/allGames';
+import { updateSearchForm } from '../actions/searchForm';
 
 const SearchForm = ({ searchReducer, updateSearchForm }) => {
-
     const handleOnChange = event => {
         const { name, value } = event.target
         const updatedData = {
             ...searchReducer,
             [name]: value
         }
+        console.log(updatedData)
         updateSearchForm(updatedData)
     }
 
