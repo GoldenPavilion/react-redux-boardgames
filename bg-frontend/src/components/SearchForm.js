@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateSearchForm } from '../actions/allGames';
 
-const SearchForm = ({ updateSearchForm }) => {
+const SearchForm = ({ searchReducer, updateSearchForm }) => {
 
     const handleOnChange = event => {
         const { name, value } = event.target
@@ -30,4 +30,10 @@ const SearchForm = ({ updateSearchForm }) => {
     )
 }
 
-export default connect(null, { updateSearchForm })(SearchForm);
+const mapStateToProps = state => {
+    return {
+        searchReducer: state.searchReducer
+    }
+}
+
+export default connect(mapStateToProps, { updateSearchForm })(SearchForm);
