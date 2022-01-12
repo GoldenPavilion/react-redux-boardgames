@@ -6,7 +6,9 @@ const AllGamesContainer = () => {
     return (
         <div className="all-games-container">
             <SearchForm />
-            <AllGames />
+            <div className="row">
+                <AllGames />
+            </div>
         </div>
     )
 }
