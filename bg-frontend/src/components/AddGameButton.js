@@ -26,7 +26,7 @@ class AddGameButton extends Component {
             return(
                 <button 
                     className="btn btn-secondary" 
-                    disabled="true">
+                    disabled={true}>
                 Shelved!</button>
             )
         } else {

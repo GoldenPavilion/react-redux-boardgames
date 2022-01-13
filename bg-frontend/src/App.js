@@ -8,12 +8,14 @@ import AllGamesContainer from './components/AllGamesContainer.js'
 import { connect } from 'react-redux';
 import { getCurrentUser } from "./actions/currentUser";
 import { getAllGames } from "./actions/allGames";
+import { getGameShelf } from "./actions/gameShelf";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 class App extends Component {
   componentDidMount() {
     this.props.getCurrentUser()
     this.props.getAllGames()
+    this.props.getGameShelf()
   }
   
   render() {
@@ -41,4 +43,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { getCurrentUser, getAllGames } )(App);
+export default connect(mapStateToProps, { getCurrentUser, getAllGames, getGameShelf } )(App);

@@ -17,3 +17,5 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(GameShelf);
+
+//redux persist
