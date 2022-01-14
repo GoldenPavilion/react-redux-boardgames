@@ -2,6 +2,7 @@ import { resetLoginForm } from './loginForm';
 import { resetSignUpForm } from './signUpForm';
 import { getGameShelf } from './gameShelf';
 import { resetGameShelf } from './gameShelf';
+import { resetSearchForm} from './searchForm';
 
 export const setCurrentUser = user => {
     return {
@@ -72,6 +73,7 @@ export const logout = () => {
     return dispatch => {
         dispatch(clearCurrentUser())
         dispatch(resetGameShelf())
+        dispatch(resetSearchForm())
         return fetch("http://localhost:3001/api/logout", {
             credentials: "include",
             method: "DELETE", 
