@@ -11,6 +11,7 @@ const NavBar = ({ currentUser, resetSearchForm }) => {
 
     return(
         <div className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div className="navbar-brand">BoardGameShelf</div>
             <ul className="navbar-nav">
                 <li className="nav-item active">
                     <Link to="/" className="nav-link" onClick={handleOnClick}>Home </Link>
