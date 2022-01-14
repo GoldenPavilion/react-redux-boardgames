@@ -41,9 +41,18 @@
   background-color: rgb(184, 142, 142);
 }
 
+.main-container {
+  padding: 10px;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
   align-items: center; 
   justify-content: space-between;
+  padding: 20px;
+}
+
+.card {
+  padding: 10px;
 }
