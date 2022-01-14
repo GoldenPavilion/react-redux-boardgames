@@ -1,13 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { resetSearchForm } from '../actions/searchForm';
 
-const NavBar = ({ currentUser }) => {
+const NavBar = ({ currentUser, resetSearchForm }) => {
+
+    const handleOnClick = () => {
+        resetSearchForm();
+    }
+
     return(
         <div className="navbar navbar-expand-lg navbar-dark bg-dark">
             <ul className="navbar-nav">
                 <li className="nav-item active">
-                    <Link to="/" className="nav-link">Home </Link>
+                    <Link to="/" className="nav-link" onClick={handleOnClick}>Home </Link>
                 </li>
                 <li className="nav-item">
                     { !currentUser ?<Link to="/login" className="nav-link">Login </Link> : ""}
@@ -29,4 +35,4 @@ const mapStateToProps = state => {
    }
 }
 
-export default connect(mapStateToProps)(NavBar);
+export default connect(mapStateToProps, { resetSearchForm })(NavBar);

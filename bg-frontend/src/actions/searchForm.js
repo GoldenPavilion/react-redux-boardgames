@@ -7,6 +7,6 @@ export const updateSearchForm = searchData => {
 
 export const resetSearchForm = () => {
     return {
-        type: 'RESET_LOGIN_FORM'
+        type: 'RESET_SEARCH_FORM'
     }
 }
