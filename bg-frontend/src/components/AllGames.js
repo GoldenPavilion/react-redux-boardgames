@@ -8,7 +8,7 @@ const AllGames = props => {
     const allGamesResults = props.allGames.length > 0 ? 
         props.allGames.map(game => <GameCard key={game.id} game={game} />) : <div />
     
-    const searchResults = props.allGames.filter((game) => game.attributes.name === searchInput)
+    const searchResults = props.allGames.filter((game) => game.attributes.name?.toLowerCase() === searchInput?.toLowerCase())
     
     const displayResults = searchResults.length > 0 ?
         searchResults.map(game => <GameCard key={game.id} game={game} />) : <div />
