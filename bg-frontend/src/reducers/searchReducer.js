@@ -3,7 +3,6 @@ const initState = {
 }
 
 const searchReducer = (state = initState, action) => {
-    debugger
     switch(action.type){
         case "UPDATE_SEARCH_FORM":
             return action.searchData

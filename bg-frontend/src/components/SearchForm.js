@@ -7,9 +7,10 @@ const SearchForm = ({ searchReducer, updateSearchForm }) => {
         event.preventDefault()
         const value = event.target.value
         const updatedData = {
-            ...searchReducer,
+            ...searchReducer, 
             value
         }
+        debugger
         updateSearchForm(updatedData)
     }
 
@@ -22,7 +23,7 @@ const SearchForm = ({ searchReducer, updateSearchForm }) => {
                         className="form-control" 
                         onChange={handleOnChange}
                         placeholder="Search..." 
-                        value={searchReducer.searchInput}
+                        value={searchReducer.value}
                     />
                 </div>
             </form>
