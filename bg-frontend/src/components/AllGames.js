@@ -14,9 +14,9 @@ const AllGames = props => {
         searchResults.map(game => <GameCard key={game.id} game={game} />) : <div />
 
     if (searchInput === ""){
-        return allGamesResults
+        return allGamesResults;
     } else {
-        return displayResults
+        return displayResults;
     }
 }
 
