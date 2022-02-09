@@ -10,7 +10,6 @@ const SearchForm = ({ searchReducer, updateSearchForm }) => {
             ...searchReducer, 
             value
         }
-        debugger
         updateSearchForm(updatedData)
     }
 

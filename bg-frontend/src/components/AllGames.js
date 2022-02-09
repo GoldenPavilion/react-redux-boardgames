@@ -11,7 +11,7 @@ const AllGames = props => {
     const searchResults = props.allGames.filter((game) => game.attributes.name?.toLowerCase() === searchInput?.toLowerCase())
     
     const displayResults = searchResults.length > 0 ?
-        searchResults.map(game => <GameCard key={game.id} game={game} />) : <div />
+        searchResults (game => <GameCard key={game.id} game={game} />) : <div />
 
     if (searchInput === ""){
         return allGamesResults;
