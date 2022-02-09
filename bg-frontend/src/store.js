@@ -9,3 +9,13 @@ import allGamesReducer from './reducers/allGamesReducer';
 import searchReducer from './reducers/searchReducer';
 
 import thunk from 'redux-thunk';
+
+const reducers = combineReducers({
+  users: usersReducer,
+  currentUserReducer,
+  loginReducer,
+  newUserReducer,
+  gameShelfReducer,
+  allGamesReducer,
+  searchReducer
+})
