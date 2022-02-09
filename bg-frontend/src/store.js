@@ -8,3 +8,4 @@ import gameShelfReducer from './reducers/gameShelfReducer';
 import allGamesReducer from './reducers/allGamesReducer';
 import searchReducer from './reducers/searchReducer';
 
+import thunk from 'redux-thunk';
