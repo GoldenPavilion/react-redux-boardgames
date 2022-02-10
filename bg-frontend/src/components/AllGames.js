@@ -11,7 +11,7 @@ const AllGames = props => {
     const searchResults = props.allGames.filter((game) => game.attributes.name?.toLowerCase() === searchInput?.toLowerCase())
     
     const displayResults = searchResults.length > 0 ?
-        searchResults (game => <GameCard key={game.id} game={game} />) : <div />
+        searchResults.map(game => <GameCard key={game.id} game={game} />) : <div />
 
     if (searchInput === ""){
         return allGamesResults;
@@ -28,3 +28,5 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(AllGames);
+
+// searchResults is not a function?
