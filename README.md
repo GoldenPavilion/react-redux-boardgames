@@ -33,3 +33,5 @@ With Node Package Manager installed, run npm start.
 $ npm start
 
 Within a few seconds, your browser should load the frontend. Begin exploring!
+
+Video Demo: https://www.youtube.com/watch?v=A637U6qeCj8
