@@ -1,9 +1,10 @@
 import React from 'react';
 
-const GameDetails = props => {
+const GameDetails = { game } => {
+
     return (
-        <div>
-            
+        <div className="game-page">
+            <img className="game-img" src={ game } alt="Game Title"></img>
         </div>
     )
 }
