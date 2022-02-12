@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import AddGameButton from './AddGameButton'
+import AddGameButton from './AddGameButton';
 
 const GameCard = props => {    
 

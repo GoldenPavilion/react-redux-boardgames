@@ -4,7 +4,8 @@ import NavBar from './components/NavBar.js';
 import MainContainer from './components/MainContainer.js';
 import Login from './components/Login.js';
 import SignUp from './components/SignUp.js';
-import AllGamesContainer from './components/AllGamesContainer.js'
+import AllGamesContainer from './components/AllGamesContainer.js';
+import GameDetails from './components/GameDetails.js';
 import { connect } from 'react-redux';
 import { getCurrentUser } from "./actions/currentUser";
 import { getAllGames } from "./actions/allGames";
