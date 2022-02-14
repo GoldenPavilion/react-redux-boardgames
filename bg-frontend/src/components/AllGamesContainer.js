@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchForm from './SearchForm';
 import AllGames from './AllGames';
+import { Outlet } from 'react-router-dom';
 
 const AllGamesContainer = () => {
     return (
@@ -9,6 +10,7 @@ const AllGamesContainer = () => {
             <div className="row">
                 <AllGames />
             </div>
+            <Outlet />
         </div>
     )
 }
