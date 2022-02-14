@@ -1,7 +1,9 @@
 import React from 'react';
 
 const GameDetails = props => {
+
     debugger
+
     return (
         <div className="game-page">
             <img className="game-img" src={ props.game.img } alt="Game Title"></img>
