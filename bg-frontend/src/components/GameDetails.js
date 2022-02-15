@@ -1,8 +1,10 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-const GameDetails = props => {
+const GameDetails = () => {
 
-    debugger
+    const location = useLocation();
+    const props = location.state;
 
     return (
         <div className="game-page">
