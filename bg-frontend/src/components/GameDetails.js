@@ -5,6 +5,7 @@ const GameDetails = () => {
 
     const location = useLocation();
     const props = location.state;
+    const game = props.game.attributes
 
     return (
         <div className="game-page">
