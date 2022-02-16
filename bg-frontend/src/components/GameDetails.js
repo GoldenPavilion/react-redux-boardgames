@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const GameDetails = () => {
 
@@ -9,6 +9,7 @@ const GameDetails = () => {
 
     return (
         <div className="game-page">
+            <div className="close">X</div>
             <img className="game-img" src={ game.img } alt="Game Title"></img>
             <div className="details">
                 <h2 className="title">{game.name}</h2>
