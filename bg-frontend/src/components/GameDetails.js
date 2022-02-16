@@ -4,8 +4,13 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const GameDetails = () => {
 
     const location = useLocation();
+    const navigate = useNavigate();
     const props = location.state;
     const game = props.game.attributes
+
+    const handleCloseClick = () => {
+        navigate('/games')
+    }
 
     return (
         <div className="game-page">
