@@ -23,3 +23,5 @@ const GameDetails = () => {
 
 export default GameDetails;
 
+// Add an X button that returns user to /games onClick
+// How could I clear the search bar?
