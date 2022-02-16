@@ -7,10 +7,10 @@ const AllGamesContainer = () => {
     return (
         <div className="all-games-container">
             <SearchForm />
+            <Outlet />
             <div className="row">
                 <AllGames />
             </div>
-            <Outlet />
         </div>
     )
 }
