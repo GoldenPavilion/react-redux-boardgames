@@ -15,6 +15,7 @@ const GameCard = props => {
             </Link>
             <div className="card-body">
                 <h3 className="card-title">{ game.name } ({ game.year_published})</h3>
+                <br />
                 <AddGameButton currentUser={props.currentUser} game={game} ids={ids} />
             </div>
         </div>
