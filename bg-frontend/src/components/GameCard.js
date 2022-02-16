@@ -10,10 +10,11 @@ const GameCard = props => {
 
     return (
         <div className="card" style={{width: 320}}>
-            <img className="card-img-top" src={ game.img } alt="Game Title"></img>
+            <Link key={props.game.id} to={`${props.game.id}`} state={{ game: props.game}}>
+                <img className="card-img-top" src={ game.img } alt="Game Title" />
+            </Link>
             <div className="card-body">
                 <h3 className="card-title">{ game.name } ({ game.year_published})</h3>
-                <Link key={props.game.id} to={`${props.game.id}`} state={{ game: props.game}}>Details</Link>
                 <AddGameButton currentUser={props.currentUser} game={game} ids={ids} />
             </div>
         </div>
