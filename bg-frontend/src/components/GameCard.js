@@ -8,7 +8,6 @@ const GameCard = props => {
     const game = props.game.attributes 
     const ids = { game_id: parseInt(props.game.id), user_id: parseInt(props.currentUser.id) }
 
-   
     return (
         <div className="card" style={{width: 320}}>
             <img className="card-img-top" src={ game.img } alt="Game Title"></img>
