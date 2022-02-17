@@ -75,4 +75,13 @@
   border-color: darkgray;
   padding: 30px;
   margin: 30px;
+  background-color: rgb(223, 209, 209)
+}
+
+.game-img {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  border-style: solid;
+  border-width: 1px;
 }
