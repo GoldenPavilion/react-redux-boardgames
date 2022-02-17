@@ -14,7 +14,9 @@ const GameDetails = () => {
 
     return (
         <div className="game-page" onClick={handleCloseClick}>
-            <div className="close">X</div>
+            <div className="close">
+                <button type="button" className="btn-close" aria-label="Close" />
+            </div>
             <img className="game-img" src={ game.img } alt="Game Title"></img>
             <div className="details">
                 <h2 className="title">{game.name}</h2>
