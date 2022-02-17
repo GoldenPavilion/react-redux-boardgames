@@ -13,7 +13,7 @@ const GameDetails = () => {
     }
 
     return (
-        <div className="game-page">
+        <div className="game-page" onClick={handleCloseClick}>
             <div className="close">X</div>
             <img className="game-img" src={ game.img } alt="Game Title"></img>
             <div className="details">
