@@ -67,3 +67,12 @@
 .close {
   float: right;
 }
+
+.game-page {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 25px;
+  border-color: darkgray;
+  padding: 30px;
+  margin: 30px;
+}
