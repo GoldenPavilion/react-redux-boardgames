@@ -6,8 +6,8 @@ import { Outlet } from 'react-router-dom';
 const AllGamesContainer = () => {
     return (
         <div className="all-games-container">
-            <SearchForm />
             <Outlet />
+            <SearchForm />
             <div className="row">
                 <AllGames />
             </div>
