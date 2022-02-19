@@ -1,7 +1,6 @@
 import React from 'react';
 import GameShelf from './GameShelf';
 import UserProfile from './UserProfile';
-import { Outlet } from 'react-router-dom';
 
 const ProfileContainer = props => {
     const user = props.user
@@ -9,7 +8,6 @@ const ProfileContainer = props => {
     return(
         <div className="profile-container">
             <UserProfile key={user.id} user={user} />
-            <Outlet />
             <h4 className="centered-title">Your Games:</h4>
             <div className="row">
                 <GameShelf />
