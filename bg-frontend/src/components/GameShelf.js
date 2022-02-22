@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import GameCard from './GameCard';
+import MyGameCard from './GameCard';
 
 const GameShelf = props => {
     const myGames = props.games ? 
         props.games.map(game => 
-            <GameCard key={game.id} game={game} />) : <div />
+            <MyGameCard key={game.id} game={game} />) : <div />
     
     return myGames
 }
