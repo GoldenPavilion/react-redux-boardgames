@@ -15,9 +15,9 @@ const GameCard = props => {
 
     return (
         <div className="card" style={{width: 320}}>
-            <Link key={props.game.id} to={`${props.game.id}`} state={{ game: props.game}}>
+            {/*<Link key={props.game.id} to={`${props.game.id}`} state={{ game: props.game}}>*/}
                 <img className="card-img-top" width="280" height="280" src={ game.img } alt="Game Title" />
-            </Link>
+            {/* </Link> */}
             <div className="card-body">
                 <h3 className="card-title">{ game.name } ({ game.year_published})</h3>
                 <br />
