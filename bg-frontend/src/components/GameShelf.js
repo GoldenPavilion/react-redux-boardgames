@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import MyGameCard from './GameCard';
+import MyGameCard from './MyGameCard';
 
 const GameShelf = props => {
     const myGames = props.games ? 
