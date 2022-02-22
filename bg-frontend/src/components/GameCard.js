@@ -8,6 +8,10 @@ const GameCard = props => {
     const game = props.game.attributes 
     const ids = { game_id: parseInt(props.game.id), user_id: parseInt(props.currentUser.id) }
 
+    const moveToTop = () => {
+        window.scrollTo(0,0);
+    }
+
     return (
         <div className="card" style={{width: 320}}>
             <Link key={props.game.id} to={`${props.game.id}`} state={{ game: props.game}}>
