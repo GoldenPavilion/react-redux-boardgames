@@ -1,6 +1,7 @@
 import React from 'react';
 import GameShelf from './GameShelf';
 import UserProfile from './UserProfile';
+import { Outlet } from 'react-router-dom';
 
 const ProfileContainer = props => {
     const user = props.user
