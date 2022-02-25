@@ -23,7 +23,10 @@ const NavBar = ({ currentUser, resetSearchForm }) => {
                     { !currentUser ? <Link to="/signup" className="nav-link">Sign Up</Link> : ""}
                 </li>
                 <li className="nav-item">
-                    { currentUser ? <Link to="/games" className="nav-link">Games</Link> : ""} 
+                    { currentUser ? <Link to="/my_games" className="nav-link">My Game Shelf</Link> : ""}
+                </li>
+                <li className="nav-item">
+                    { currentUser ? <Link to="/games" className="nav-link">All Games</Link> : ""} 
                 </li>
             </ul>
         </div>
