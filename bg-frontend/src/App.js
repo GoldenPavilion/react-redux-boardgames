@@ -5,6 +5,7 @@ import MainContainer from './components/MainContainer.js';
 import Login from './components/Login.js';
 import SignUp from './components/SignUp.js';
 import AllGamesContainer from './components/AllGamesContainer.js';
+import ProfileContainer from './components/ProfileContainer.js';
 import GameDetails from './components/GameDetails.js';
 import { connect } from 'react-redux';
 import { getCurrentUser } from "./actions/currentUser";
@@ -32,6 +33,12 @@ class App extends Component {
               {loggedIn ? 
                 <Route exact path='/games' element={<AllGamesContainer />}>
                   <Route path=":gameId" element={<GameDetails />}/>
+                </Route> 
+                : ""
+              }
+              {loggedIn ? 
+                <Route exact path='/my_games' element={<ProfileContainer />}>
+                  <Route path=":myGameId" element={<GameDetails />}/>
                 </Route> 
                 : ""
               }
