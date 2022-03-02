@@ -11,7 +11,9 @@ const GameShelf = props => {
         <div className="game-shelf">
             <br />
             <h1>Your Games:</h1>
-            {myGames}
+            <div className="row">
+                {myGames}
+            </div>
         </div>
     )
 }
