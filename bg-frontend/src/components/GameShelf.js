@@ -7,7 +7,11 @@ const GameShelf = props => {
         props.games.map(game => 
             <MyGameCard key={game.id} game={game} />) : <div />
     
-    return myGames
+    return (
+        <div>
+            {myGames}
+        </div>
+    )
 }
 
 const mapStateToProps = state => {
