@@ -8,7 +8,9 @@ const GameShelf = props => {
             <MyGameCard key={game.id} game={game} />) : <div />
     
     return (
-        <div>
+        <div className="game-shelf">
+            <br />
+            <h1>Your Games:</h1>
             {myGames}
         </div>
     )
