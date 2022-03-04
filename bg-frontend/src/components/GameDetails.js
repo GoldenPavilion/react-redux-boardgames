@@ -4,15 +4,14 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const GameDetails = () => {
 
     const location = useLocation();
-    console.log(location.pathname)
     const navigate = useNavigate();
     const props = location.state;
     const game = props.game.attributes
-
+    
     const handleCloseClick = () => {
-        if(location.pathname === `/games/${game.id}`){
+        if(location.pathname === `/games/${props.game.id}`){
             navigate('/games')
-        } else if (location.pathname === `/my_games/${game.id}`){
+        } else if (location.pathname === `/my_games/${props.game.id}`){
             navigate('/my_games')
         }
     }
