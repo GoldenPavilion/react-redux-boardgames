@@ -10,9 +10,9 @@ const GameDetails = () => {
     const game = props.game.attributes
 
     const handleCloseClick = () => {
-        if(location.pathname = `/games/${game.id}`){
+        if(location.pathname === `/games/${game.id}`){
             navigate('/games')
-        } else if (location.pathname = `/my_games/${game.id}`){
+        } else if (location.pathname === `/my_games/${game.id}`){
             navigate('/my_games')
         }
     }
