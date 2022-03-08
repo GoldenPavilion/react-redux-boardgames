@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Comments = props => {
-    debugger
+const Comment = props => {
+    
     return(
         <div className="comments">
             <h3>Comments:</h3>
+            
         </div>
     )
 }
 
-export default Comments;
+export default Comment;
