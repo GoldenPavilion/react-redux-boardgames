@@ -29,7 +29,7 @@ const GameDetails = () => {
                 <p className="text">Players: {game.min_players} - {game.max_players}</p>
                 <p className="text">Play Time: {game.min_playtime} - {game.max_playtime}</p>
                 <p className="text">Description: {game.description_preview}</p>
-                <Comments />
+                <Comments game={ game }/>
             </div>
         </div>
     )
