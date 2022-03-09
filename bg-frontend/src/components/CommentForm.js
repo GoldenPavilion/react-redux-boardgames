@@ -4,8 +4,8 @@ const CommentForm = () => {
     return(
         <div className="comment-form">
             <form>
-                <input type="text"></input>
-                <input type="submit" value="Add Comment"></input>
+                <input className="content-entry" type="text"></input>
+                <input className="content-button" type="submit" value="Add Comment"></input>
             </form>
         </div>
     )
