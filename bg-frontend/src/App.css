@@ -134,3 +134,11 @@
   border-color: darkgray;
   background-color: white;
 }
+
+.content-entry {
+  width: 62%;
+  padding: 5px;
+  margin: 5px;
+  border-width: 1px;
+  border-radius: 5px;
+}
