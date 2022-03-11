@@ -9,6 +9,10 @@ const CommentForm = ({ commentReducer, updateCommentForm }) => {
         updateCommentForm(comment)
     }
 
+    const handleSubmit = () => {
+        console.log(props)
+    }
+
     return(
         <div className="comment-form">
             <form>
@@ -21,7 +25,8 @@ const CommentForm = ({ commentReducer, updateCommentForm }) => {
                 <input 
                     className="content-button" 
                     type="submit" 
-                    value="Add Comment" 
+                    value="Add Comment"
+                    onClick={handleSubmit} 
                 />
             </form>
         </div>
