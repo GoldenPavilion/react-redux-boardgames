@@ -3,6 +3,12 @@ import { connect } from 'react-redux';
 import { updateCommentForm } from '../actions/commentForm';
 
 const CommentForm = ({ commentReducer, updateCommentForm }) => {
+
+    const handleOnChange = event => {
+        const comment = event.target.value;
+        updateCommentForm(comment)
+    }
+
     return(
         <div className="comment-form">
             <form>
@@ -19,4 +25,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(CommentForm);
+export default connect(mapStateToProps, { updateCommentForm })(CommentForm);
