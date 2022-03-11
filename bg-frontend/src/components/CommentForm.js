@@ -13,4 +13,10 @@ const CommentForm = () => {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+        commentReducer: state.commentReducer
+    }
+}
+
 export default CommentForm;
