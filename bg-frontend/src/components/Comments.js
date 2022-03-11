@@ -6,7 +6,7 @@ const Comments = props => {
     
     return(
         <div className="comments">
-            <h3>Comments:</h3>
+            <h5>Comments:</h5>
             <CommentForm />
             { props.game.comments.map(comment => 
                 <Comment key={comment.id} comment={comment} />

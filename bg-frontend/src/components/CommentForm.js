@@ -10,7 +10,7 @@ const CommentForm = ({ commentReducer, updateCommentForm }) => {
     }
 
     const handleSubmit = () => {
-        console.log(props)
+        console.log(this.props)
     }
 
     return(
