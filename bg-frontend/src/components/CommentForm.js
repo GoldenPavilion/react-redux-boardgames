@@ -12,8 +12,17 @@ const CommentForm = ({ commentReducer, updateCommentForm }) => {
     return(
         <div className="comment-form">
             <form>
-                <input className="content-entry" type="text"></input>
-                <input className="content-button" type="submit" value="Add Comment"></input>
+                <input 
+                    className="content-entry" 
+                    type="text"
+                    value={commentReducer.content} 
+                    onChange={handleOnChange} 
+                />
+                <input 
+                    className="content-button" 
+                    type="submit" 
+                    value="Add Comment" 
+                />
             </form>
         </div>
     )
