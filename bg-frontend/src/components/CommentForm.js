@@ -19,4 +19,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default CommentForm;
+export default connect(mapStateToProps)(CommentForm);
