@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { updateCommentForm } from '../actions/commentForm';
 
 const CommentForm = ({ commentReducer, updateCommentForm }) => {
-
+    
     const handleOnChange = event => {
         const comment = event.target.value;
         updateCommentForm(comment)
