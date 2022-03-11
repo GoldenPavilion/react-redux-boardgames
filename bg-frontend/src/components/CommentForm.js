@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { updateCommentForm } from '../actions/commentForm';
 
 const CommentForm = () => {
     return(
