@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { updateCommentForm } from '../actions/commentForm';
 
-const CommentForm = () => {
+const CommentForm = ({ commentReducer, updateCommentForm }) => {
     return(
         <div className="comment-form">
             <form>
