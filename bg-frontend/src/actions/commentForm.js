@@ -31,3 +31,21 @@ export const getComments = () => {
         .catch(console.log)
     }
 }
+
+export const addComment = (ids) => {
+    return dispatch => {
+        return fetch("http://localhost:3001/api/comments", {
+            credentials: "include",
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(ids)
+        })
+        .then(resp => resp.json())
+        .then (response => {
+            dispatch(resetCommentForm())
+            dispatch(getComments())
+        })
+    }
+}
