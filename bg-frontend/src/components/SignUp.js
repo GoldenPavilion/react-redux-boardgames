@@ -15,7 +15,6 @@ const SignUp = ({ newUserReducer, updateSignUpForm, submitSignUp }) => {
         }
         updateSignUpForm(updatedData)
     }
-    
 
     const handleCheck = event => {
         if (event.target.checked){
