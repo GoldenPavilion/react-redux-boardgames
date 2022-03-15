@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { updateCommentForm } from '../actions/commentForm';
+import { addComment } from '../actions/commentForm';
 
 const CommentForm = ({ commentReducer, updateCommentForm }) => {
     
@@ -39,4 +40,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { updateCommentForm })(CommentForm);
+export default connect(mapStateToProps, { updateCommentForm, addComment })(CommentForm);
