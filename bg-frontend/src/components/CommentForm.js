@@ -5,7 +5,6 @@ import { addComment } from '../actions/commentForm';
 
 const CommentForm = (props) => {
     
-    const game = props.game.attributes
     const ids = { 
         game_id: parseInt(props.game.id), 
         user_id: parseInt(props.currentUserReducer.id), 

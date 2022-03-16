@@ -20,7 +20,7 @@ class App extends Component {
     this.props.getGameShelf();
   }
   
-  componentDidUnmount() {
+  componentWillUnmount() {
     logout();
   }
 
