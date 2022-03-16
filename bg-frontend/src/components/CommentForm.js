@@ -13,7 +13,7 @@ const CommentForm = (props) => {
 
     const handleOnChange = event => {
         const comment = event.target.value;
-        updateCommentForm(comment)
+        props.updateCommentForm(comment);
     }
 
     const handleSubmit = () => {
