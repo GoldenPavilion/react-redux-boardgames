@@ -12,6 +12,7 @@ const CommentForm = ({ commentReducer, updateCommentForm, addComment }) => {
 
     const handleSubmit = () => {
         console.log(this.props)
+        // grab ids?
     }
 
     return(
