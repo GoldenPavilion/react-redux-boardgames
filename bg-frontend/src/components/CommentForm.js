@@ -4,7 +4,7 @@ import { updateCommentForm } from '../actions/commentForm';
 import { addComment } from '../actions/commentForm';
 
 const CommentForm = (props) => {
-    debugger
+
     const handleOnChange = event => {
         const comment = event.target.value;
         updateCommentForm(comment)
@@ -37,7 +37,8 @@ const CommentForm = (props) => {
 
 const mapStateToProps = state => {
     return {
-        commentReducer: state.commentReducer
+        commentReducer: state.commentReducer,
+        currentUserReducer: state.currentUserReducer
     }
 }
 
