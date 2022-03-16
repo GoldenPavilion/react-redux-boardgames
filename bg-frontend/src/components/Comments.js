@@ -3,12 +3,12 @@ import Comment from './Comment.js';
 import CommentForm from './CommentForm.js';
 
 const Comments = props => {
-    
+    debugger
     return(
         <div className="comments">
             <h5>Comments:</h5>
             <CommentForm />
-            { props.game.comments.map(comment => 
+            { props.game.attributes.comments.map(comment => 
                 <Comment key={comment.id} comment={comment} />
             )}
         </div>
