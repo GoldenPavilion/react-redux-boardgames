@@ -4,7 +4,7 @@ import { updateCommentForm } from '../actions/commentForm';
 import { addComment } from '../actions/commentForm';
 
 const CommentForm = (props) => {
-    
+    debugger
     const ids = { 
         game_id: parseInt(props.game.id), 
         user_id: parseInt(props.currentUserReducer.id), 
@@ -16,9 +16,10 @@ const CommentForm = (props) => {
         props.updateCommentForm(comment);
     }
 
-    const handleSubmit = () => {
-        console.log(props)
-        // grab ids?
+    const handleSubmit = event => {
+        console.log(ids);
+        event.preventDefault();
+        addComment(ids);
     }
 
     return(
