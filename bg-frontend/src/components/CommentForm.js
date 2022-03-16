@@ -27,7 +27,7 @@ const CommentForm = (props) => {
                 <input 
                     className="content-entry" 
                     type="text"
-                    value={props.commentReducer.content} 
+                    value={props.commentReducer} 
                     onChange={handleOnChange} 
                 />
                 <input 
