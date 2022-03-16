@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 import { updateCommentForm } from '../actions/commentForm';
 import { addComment } from '../actions/commentForm';
 
-const CommentForm = ({ commentReducer, updateCommentForm, addComment }) => {
-    
+const CommentForm = (props) => {
+    debugger
     const handleOnChange = event => {
         const comment = event.target.value;
         updateCommentForm(comment)
     }
 
     const handleSubmit = () => {
-        console.log(this.props)
+        console.log(props)
         // grab ids?
     }
 
@@ -21,7 +21,7 @@ const CommentForm = ({ commentReducer, updateCommentForm, addComment }) => {
                 <input 
                     className="content-entry" 
                     type="text"
-                    value={commentReducer.content} 
+                    value={props.commentReducer.content} 
                     onChange={handleOnChange} 
                 />
                 <input 
