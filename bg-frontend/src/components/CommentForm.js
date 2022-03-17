@@ -4,11 +4,11 @@ import { updateCommentForm } from '../actions/commentForm';
 import { addComment } from '../actions/commentForm';
 
 const CommentForm = (props) => {
-    debugger
+
     const ids = { 
         game_id: parseInt(props.game.id), 
         user_id: parseInt(props.currentUserReducer.id), 
-        content: props.commentReducer.content 
+        content: props.commentReducer
     }
 
     const handleOnChange = event => {
