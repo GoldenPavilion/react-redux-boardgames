@@ -19,7 +19,7 @@ const CommentForm = (props) => {
     const handleSubmit = event => {
         event.preventDefault();
         console.log(ids);
-        addComment(ids);
+        props.addComment(ids);
     }
 
     return(
