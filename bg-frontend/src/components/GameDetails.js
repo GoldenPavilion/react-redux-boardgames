@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Comments from './Comments';
 
@@ -36,3 +36,5 @@ const GameDetails = () => {
 }
 
 export default GameDetails;
+
+// reset state on unmount
