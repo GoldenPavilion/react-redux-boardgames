@@ -7,7 +7,7 @@ import newUserReducer from './reducers/newUserReducer';
 import gameShelfReducer from './reducers/gameShelfReducer';
 import allGamesReducer from './reducers/allGamesReducer';
 import searchReducer from './reducers/searchReducer';
-import commentReducer from './reducers/commentReducer';
+import commentFormReducer from './reducers/commentFormReducer';
 
 import thunk from 'redux-thunk';
 
@@ -19,7 +19,7 @@ const reducers = combineReducers({
   gameShelfReducer,
   allGamesReducer,
   searchReducer,
-  commentReducer
+  commentFormReducer
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

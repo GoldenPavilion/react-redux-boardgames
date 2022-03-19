@@ -8,7 +8,7 @@ const CommentForm = (props) => {
     const ids = { 
         game_id: parseInt(props.game.id), 
         user_id: parseInt(props.currentUserReducer.id), 
-        content: props.commentReducer
+        content: props.commentFormReducer
     }
 
     const handleOnChange = event => {
@@ -28,7 +28,7 @@ const CommentForm = (props) => {
                 <input 
                     className="content-entry" 
                     type="text"
-                    value={props.commentReducer} 
+                    value={props.commentFormReducer} 
                     onChange={handleOnChange} 
                 />
                 <input 
@@ -44,7 +44,7 @@ const CommentForm = (props) => {
 
 const mapStateToProps = state => {
     return {
-        commentReducer: state.commentReducer,
+        commentFormReducer: state.commentFormReducer,
         currentUserReducer: state.currentUserReducer
     }
 }
