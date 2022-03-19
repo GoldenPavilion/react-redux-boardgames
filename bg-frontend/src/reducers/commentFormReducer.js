@@ -4,7 +4,7 @@ const initState = {
     user_id: null
 }
 
-const commentReducer = (state = initState, action) => {
+const commentFormReducer = (state = initState, action) => {
     switch (action.type) {
         case "UPDATE_COMMENT_FORM":
             return action.formData
@@ -15,4 +15,4 @@ const commentReducer = (state = initState, action) => {
     } 
 }
 
-export default commentReducer;
+export default commentFormReducer;
