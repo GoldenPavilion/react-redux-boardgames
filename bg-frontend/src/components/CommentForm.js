@@ -18,7 +18,7 @@ const CommentForm = (props) => {
             ...commentFormReducer,
             comment
         }
-        props.updateCommentForm(comment);
+        props.updateCommentForm(updatedData);
     }
 
     const handleSubmit = event => {
