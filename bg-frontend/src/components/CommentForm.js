@@ -13,10 +13,10 @@ const CommentForm = (props) => {
     }
 
     const handleOnChange = event => {
-        const comment = event.target.value;
+        const { name, value } = event.target;
         const updatedData = {
             ...commentFormReducer,
-            comment
+            [name]: value
         }
         props.updateCommentForm(updatedData);
     }
