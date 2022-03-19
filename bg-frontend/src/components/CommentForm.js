@@ -5,7 +5,7 @@ import { addComment } from '../actions/commentForm';
 import commentFormReducer from '../reducers/commentFormReducer';
 
 const CommentForm = (props) => {
-    debugger
+    
     const ids = { 
         game_id: parseInt(props.game.id), 
         user_id: parseInt(props.currentUserReducer.id), 
@@ -18,6 +18,7 @@ const CommentForm = (props) => {
             ...commentFormReducer,
             [name]: value
         }
+        debugger
         props.updateCommentForm(updatedData);
     }
 
@@ -33,6 +34,7 @@ const CommentForm = (props) => {
                 <input 
                     className="content-entry" 
                     type="text"
+                    name="content"
                     value={props.commentFormReducer.content} 
                     onChange={handleOnChange} 
                 />
