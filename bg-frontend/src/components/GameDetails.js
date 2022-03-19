@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { resetCommentForm } from '../actions/commentForm';
 import Comments from './Comments';
 
 const GameDetails = () => {
@@ -9,6 +10,10 @@ const GameDetails = () => {
     const props = location.state;
     const game = props.game.attributes
     
+    useEffect(() => {
+        resetCommentForm();
+    });
+
     const handleCloseClick = () => {
         if(location.pathname === `/games/${props.game.id}`){
             navigate('/games')
