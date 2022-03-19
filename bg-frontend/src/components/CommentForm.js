@@ -18,7 +18,6 @@ const CommentForm = (props) => {
             ...commentFormReducer,
             [name]: value
         }
-        debugger
         props.updateCommentForm(updatedData);
     }
 
@@ -37,6 +36,16 @@ const CommentForm = (props) => {
                     name="content"
                     value={props.commentFormReducer.content} 
                     onChange={handleOnChange} 
+                />
+                <input 
+                    type="hidden"
+                    name="game_id" 
+                    value={ props.commentFormReducer.game_id = parseInt(props.game.id) }
+                />
+                <input 
+                    type="hidden"
+                    name="user_id" 
+                    value={ props.commentFormReducer.user_id = parseInt(props.currentUserReducer.id) }
                 />
                 <input 
                     className="content-button" 
