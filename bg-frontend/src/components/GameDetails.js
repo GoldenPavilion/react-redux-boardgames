@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { resetCommentForm } from '../actions/commentForm';
 import Comments from './Comments';
 
 const GameDetails = () => {
-
+    debugger
     const location = useLocation();
     const navigate = useNavigate();
     const props = location.state;
@@ -40,6 +41,6 @@ const GameDetails = () => {
     )
 }
 
-export default GameDetails;
+export default connect(null, { resetCommentForm })(GameDetails);
 
 // reset state on unmount
