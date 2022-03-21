@@ -5,20 +5,20 @@ import { resetCommentForm } from '../actions/commentForm';
 import Comments from './Comments';
 
 const GameDetails = () => {
-    debugger
+    
     const location = useLocation();
     const navigate = useNavigate();
-    const props = location.state;
-    const game = props.game.attributes
+    const locationProps = location.state;
+    const game = locationProps.game.attributes
     
     useEffect(() => {
         resetCommentForm();
     });
 
     const handleCloseClick = () => {
-        if(location.pathname === `/games/${props.game.id}`){
+        if(location.pathname === `/games/${locationProps.game.id}`){
             navigate('/games')
-        } else if (location.pathname === `/my_games/${props.game.id}`){
+        } else if (location.pathname === `/my_games/${locationProps.game.id}`){
             navigate('/my_games')
         }
     }
@@ -35,7 +35,7 @@ const GameDetails = () => {
                 <p className="text">Players: {game.min_players} - {game.max_players}</p>
                 <p className="text">Play Time: {game.min_playtime} - {game.max_playtime}</p>
                 <p className="text">Description: {game.description_preview}</p>
-                <Comments game={ props.game }/>
+                <Comments game={ locationProps.game }/>
             </div>
         </div>
     )
