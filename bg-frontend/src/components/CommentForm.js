@@ -5,12 +5,6 @@ import { addComment } from '../actions/commentForm';
 import commentFormReducer from '../reducers/commentFormReducer';
 
 const CommentForm = (props) => {
-    
-    const ids = { 
-        game_id: parseInt(props.game.id), 
-        user_id: parseInt(props.currentUserReducer.id), 
-        content: props.commentFormReducer
-    }
 
     const handleOnChange = event => {
         const { name, value } = event.target;
