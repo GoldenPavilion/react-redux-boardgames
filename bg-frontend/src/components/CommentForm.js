@@ -17,8 +17,8 @@ const CommentForm = (props) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        console.log(ids);
-        props.addComment(ids);
+        console.log(commentFormReducer);
+        props.addComment(commentFormReducer);
     }
 
     return(
