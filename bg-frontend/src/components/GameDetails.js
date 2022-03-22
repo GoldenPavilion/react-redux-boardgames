@@ -42,5 +42,3 @@ const GameDetails = (props) => {
 }
 
 export default connect(null, { resetCommentForm })(GameDetails);
-
-// reset state on unmount

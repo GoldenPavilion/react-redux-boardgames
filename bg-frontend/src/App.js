@@ -62,4 +62,3 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps, { getCurrentUser, getAllGames, getGameShelf } )(App);
 
-// GameShelf renders (weirdly), but AllGames broken again
