@@ -1,7 +1,7 @@
 const initState = {
     content: "",
-    game_id: null, 
-    user_id: null
+    game_id: "", 
+    user_id: ""
 }
 
 const commentFormReducer = (state = initState, action) => {
