@@ -4,15 +4,15 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { resetCommentForm } from '../actions/commentForm';
 import Comments from './Comments';
 
-const GameDetails = () => {
-    
+const GameDetails = (props) => {
+
     const location = useLocation();
     const navigate = useNavigate();
     const locationProps = location.state;
     const game = locationProps.game.attributes
     
     useEffect(() => {
-        resetCommentForm();
+        props.resetCommentForm();
     });
 
     const handleCloseClick = () => {
