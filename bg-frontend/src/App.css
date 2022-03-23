@@ -151,3 +151,8 @@
   background-color: rgb(94, 86, 86);
   color: white;
 }
+
+.comment-user {
+  color: rgb(167, 149, 149);
+  text-align: right;
+}
