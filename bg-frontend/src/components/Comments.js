@@ -12,7 +12,7 @@ const Comments = props => {
         <div className="comments">
             <h5>Comments:</h5>
             <CommentForm game= { props.game } />
-            { props.game.attributes.comments.map(comment => 
+            { gameComments.map(comment => 
                 <Comment key={comment.id} comment={comment} />
             )}
         </div>
