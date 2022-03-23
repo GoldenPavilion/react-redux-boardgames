@@ -4,6 +4,9 @@ import Comment from './Comment.js';
 import CommentForm from './CommentForm.js';
 
 const Comments = props => {
+    
+    const gameComments = props.commentsReducer.filter(comment => 
+        comment.attributes.game.id === parseInt(props.game.id))
 
     return(
         <div className="comments">
