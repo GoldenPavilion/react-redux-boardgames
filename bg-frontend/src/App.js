@@ -14,6 +14,7 @@ import { getGameShelf } from "./actions/gameShelf";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 class App extends Component {
+  
   componentDidMount() {
     this.props.getCurrentUser();
     this.props.getAllGames();
