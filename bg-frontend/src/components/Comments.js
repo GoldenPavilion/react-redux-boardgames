@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Comment from './Comment.js';
 import CommentForm from './CommentForm.js';
 
@@ -15,4 +16,10 @@ const Comments = props => {
     )
 }
 
-export default Comments;
+const mapStateToProps = state => {
+    return {
+        commentsReducer: state.commentsReducer
+    }
+}
+
+export default connect(mapStateToProps)(Comments);
