@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 import { getCurrentUser, logout } from "./actions/currentUser";
 import { getAllGames } from "./actions/allGames";
 import { getGameShelf } from "./actions/gameShelf";
+import { getComments } from "./actions/comments";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
     this.props.getCurrentUser();
     this.props.getAllGames();
     this.props.getGameShelf();
+    this.props.getComments();
   }
   
   componentWillUnmount() {
@@ -61,5 +63,5 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps, { getCurrentUser, getAllGames, getGameShelf } )(App);
+export default connect(mapStateToProps, { getCurrentUser, getAllGames, getGameShelf, getComments } )(App);
 
