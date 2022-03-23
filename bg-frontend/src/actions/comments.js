@@ -4,3 +4,9 @@ export const setComments = comments => {
         comments
     }
 }
+
+export const resetComments = () => {
+    return {
+        type: 'RESET_COMMENTS'
+    }
+}
