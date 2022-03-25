@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { updateCommentForm } from '../actions/commentForm';
-import { addComment } from '../actions/commentForm';
+import { addComment } from '../actions/comments';
 import commentFormReducer from '../reducers/commentFormReducer';
 
 const CommentForm = (props) => {
